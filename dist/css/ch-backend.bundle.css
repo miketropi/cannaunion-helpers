@@ -1,1 +1,3 @@
-
+.ch-table tr:nth-child(even) th, .ch-table tr:nth-child(even) td {
+  background: #eee;
+}

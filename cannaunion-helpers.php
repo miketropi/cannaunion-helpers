@@ -22,6 +22,8 @@
   /**
    * Inc
    */
+  require(CH_DIR . '/inc/admin/register-menu-page.php');
+
   require(CH_DIR . '/inc/static.php');
   require(CH_DIR . '/inc/helpers.php');
   require(CH_DIR . '/inc/hooks.php');
