@@ -1,0 +1,29 @@
+<?php 
+/**
+ * Plugin Name: Cannaunion Helpers
+ * Plugin URI: #
+ * Description: Helper function for Cannaunion
+ * Version: 1.0.0
+ * Author: Mike
+ * Author URI: #
+ * License: GNU GENERAL PUBLIC LICENSE
+ */
+
+{
+  /**
+   * Define
+   */
+  define('CH_VER', '1.0.0');
+  define('CH_DIR', plugin_dir_path(__FILE__));
+  define('CH_URI', plugin_dir_url(__FILE__));
+}
+
+{
+  /**
+   * Inc
+   */
+  require(CH_DIR . '/inc/static.php');
+  require(CH_DIR . '/inc/helpers.php');
+  require(CH_DIR . '/inc/hooks.php');
+  require(CH_DIR . '/inc/ajax.php');
+}
