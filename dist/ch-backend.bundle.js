@@ -7,7 +7,16 @@
   \************************/
 /***/ (() => {
 
+/**
+ * Backend js
+ */
+(function (w, $) {
+  'use strict';
 
+  var ready = function ready() {};
+
+  $(ready);
+})(window, jQuery);
 
 /***/ }),
 
