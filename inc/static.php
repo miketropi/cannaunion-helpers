@@ -12,6 +12,10 @@ function ch_enqueue_scripts() {
 
   wp_localize_script('cannaunion-script', 'CH_PHP_DATA', [
     'ajax_url' => admin_url('admin-ajax.php'),
+    'algolia' => [
+      'AppID' => get_option('algolia_application_id'),
+      'AdminAPIKey' => get_option('algolia_api_key'),
+    ],
     'lang' => []
   ]);
 }

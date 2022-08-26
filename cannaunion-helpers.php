@@ -28,4 +28,10 @@
   require(CH_DIR . '/inc/helpers.php');
   require(CH_DIR . '/inc/hooks.php');
   require(CH_DIR . '/inc/ajax.php');
+  require(CH_DIR . '/inc/acf-options.php');
+
+  /**
+   * Algolia serach
+   */
+  require(CH_DIR  .'/inc/algolia-search/index.php');
 }
