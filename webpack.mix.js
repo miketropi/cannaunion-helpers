@@ -16,4 +16,7 @@ mix
   .js('./src/main.js', 'dist/ch.bundle.js')
   .react()
   .sass('./src/scss/main.scss', 'css/ch.bundle.css')
+  .options({
+    processCssUrls: false
+  })
   .setPublicPath('dist');

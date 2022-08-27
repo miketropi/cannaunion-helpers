@@ -1,11 +1,17 @@
 .wp-algolia-search-icon {
-  display: inline-block;
-  width: 28px;
+  display: inline-flex;
+  align-items: center;
   line-height: 0;
+  font-size: 14px;
+  color: #3b3b3b;
+  font-family: Arial;
+  cursor: pointer;
 
   span.__icon {
     display: inline-block;
-    width: 100%;
+    width: 20px;
+    min-width: 20px;
+    margin-left: 4px;
 
     svg {
       width: 100%;
@@ -21,53 +27,79 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(1, 1, 1, 0.6);
+  background: rgb(56 54 75 / 82%);
   overflow: auto;
   z-index: 99999;
   font-family: Arial, Helvetica, sans-serif;
+  transition: .3s ease;
+  -webkit-transition: .3s ease;
+
+  &__close {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1em;
+    border-radius: 40px;
+    border: solid 2px white;
+    cursor: pointer;
+
+    svg {
+      width: 50%;
+      fill: white;
+    }
+  }
 
   &__content {
     width: 580px;
     max-width: calc(100% - 30px);
     margin: 5vh auto;
+    opacity: 0;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
   }
 
   form.ais-SearchBox-form {
     display: flex;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     position: relative;
 
-    button.ais-SearchBox-reset {
+    button {
       display: none !important;
-    }
-
-    button.ais-SearchBox-submit {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      border: none;
-      border-radius: 0;
-      background: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+    } 
 
     input[type=search] {
       font-family: Arial;
       border: none;
-      font-size: 30px;
+      font-size: 30px; 
       font-weight: bold;
-      background: no-repeat;
       border-bottom: solid 2px white;
       border-radius: 0;
       color: white;
       padding: 10px 0;
+      background: url('../../images/search.svg') no-repeat left center, transparent;
+      background-size: 30px;
+      padding-left: 50px;
 
-      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: white;
+      &::placeholder { 
+        color: rgba(255,255,255,.8);
       }
+    }
+  }
+
+  .meta-info-instant-search {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1em;
+
+    li.meta-item {
+      margin-right: 1em;
+      list-style: none;
     }
   }
 
@@ -75,24 +107,74 @@
 
   }
 
+  .ais-Pagination {
+
+    .ais-Pagination-list {
+      justify-content: center;
+      padding: 10px 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .ais-Pagination-item {
+        list-style: none;
+        margin: 3px;
+        padding: 3px;
+        font-weight: bold;
+        font-size: 1.1em;
+
+        a, .ais-Pagination-link {
+          color: white !important;
+        }
+
+        &.ais-Pagination-item--selected {
+          
+          a {
+            color: #BE9D4F !important;
+          }
+        }
+
+        &.ais-Pagination-item--firstPage {
+          margin-right: auto;
+        }
+
+        &.ais-Pagination-item--lastPage {
+          margin-left: auto;
+        }
+
+        &.ais-Pagination-item--disabled {
+          opacity: .3;
+        }
+      }
+    }
+  }
+
   ol.ais-Hits-list {
     margin: 0;
     padding: 0;
     background: white;
     border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgb(1 1 1 / 30%);
 
     li {
       list-style: none;
       padding: 1em;
       border-bottom: solid 1px #eee;
+      transition: .3s ease;
+      -webkit-transition: .3s ease;
+      
+      &:hover {
+        background: rgba(1,1,1,.03);
+      }
 
       .hit-item {
         display: flex;
         align-items: center;
 
         &__thumbnail {
-          width: 100px;
-          min-width: 100px;
+          width: 60px;
+          min-width: 60px;
           margin-right: 1.5em;
 
           img {
@@ -104,8 +186,9 @@
           
           .__title {
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1em;
             margin-bottom: 0.2em;
+            margin-top: 0;
 
             a {
               color: black;
@@ -113,6 +196,18 @@
           }
         }
       }
+    }
+  }
+}
+
+body.algolia-search-modal-active {
+
+  .wp-algolia-search-modal {
+    visibility: visible;
+    opacity: 1;
+
+    &__content {
+      opacity: 1;
     }
   }
 }
