@@ -5992,10 +5992,16 @@ var algoliaSearchModal = function algoliaSearchModal() {
 };
 
 var algoliaSearchInit = function algoliaSearchInit() {
-  var elem = document.querySelector('#Wp_Algolia_Search_Container');
-  if (!elem) return;
-  var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(elem);
-  root.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(AlgoliaSearchApp, {})); // Modal
+  var elems = document.querySelectorAll('#Wp_Algolia_Search_Container, #WP_Algolia_Search_Mobi_View');
+  if (_toConsumableArray(elems).length == 0) return;
+
+  _toConsumableArray(elems).forEach(function (el) {
+    var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(el);
+    root.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(AlgoliaSearchApp, {}));
+  }); // const root = createRoot(elem);
+  // root.render(<AlgoliaSearchApp />);
+  // Modal
+
 
   algoliaSearchModal();
 };

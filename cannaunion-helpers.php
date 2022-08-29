@@ -29,6 +29,7 @@
   require(CH_DIR . '/inc/hooks.php');
   require(CH_DIR . '/inc/ajax.php');
   require(CH_DIR . '/inc/acf-options.php');
+  require(CH_DIR . '/inc/shortcodes.php');
 
   /**
    * Algolia serach

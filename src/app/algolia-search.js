@@ -117,11 +117,17 @@ const algoliaSearchModal = () => {
 }
 
 const algoliaSearchInit = () => { 
-  const elem = document.querySelector('#Wp_Algolia_Search_Container');
-  if(!elem) return;
+  const elems = document.querySelectorAll('#Wp_Algolia_Search_Container, #WP_Algolia_Search_Mobi_View');
 
-  const root = createRoot(elem);
-  root.render(<AlgoliaSearchApp />);
+  if([...elems].length == 0) return;
+
+  [...elems].forEach(el => {
+    const root = createRoot(el);
+    root.render(<AlgoliaSearchApp />);
+  })
+  
+  // const root = createRoot(elem);
+  // root.render(<AlgoliaSearchApp />);
 
   // Modal
   algoliaSearchModal();
