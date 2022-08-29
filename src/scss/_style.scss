@@ -68,12 +68,12 @@
 
     button {
       display: none !important;
-    } 
+    }
 
     input[type=search] {
       font-family: Arial;
       border: none;
-      font-size: 30px; 
+      font-size: 30px;
       font-weight: bold;
       border-bottom: solid 2px white;
       border-radius: 0;
@@ -83,7 +83,7 @@
       background-size: 30px;
       padding-left: 50px;
 
-      &::placeholder { 
+      &::placeholder {
         color: rgba(255,255,255,.8);
       }
     }
@@ -130,7 +130,7 @@
         }
 
         &.ais-Pagination-item--selected {
-          
+
           a {
             color: #BE9D4F !important;
           }
@@ -164,7 +164,7 @@
       border-bottom: solid 1px #eee;
       transition: .3s ease;
       -webkit-transition: .3s ease;
-      
+
       &:hover {
         background: rgba(1,1,1,.03);
       }
@@ -184,7 +184,7 @@
         }
 
         &__entry {
-          
+
           .__title {
             font-weight: bold;
             font-size: 1em;
@@ -226,22 +226,237 @@ body.algolia-search-modal-active {
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
     &:not(:last-child) {
       margin-right: 1.2em;
     }
 
     a {
+      position: relative;
       display: inline-block;
     }
 
     span.__icon {
       display: inline-block;
-      width: 20px; 
-
+      width: 20px;
+      -webkit-transition: all .3s;
+      transition: all .3s;
       svg {
         width: 100%;
       }
     }
+    span.__close {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+.wp-algolia-search-mobi-view--active {
+  .header-icon-tools li.__item {
+    span.__icon {
+      opacity: 0;
+    }
+    span.__close {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .wp-algolia-search-mobi-view-wrapper {
+    display: block;
+  }
+}
+.wp-algolia-search-mobi-view-wrapper {
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  right: -20px;
+  width: 100vw;
+  height: 100vh;
+  background: #FFFFFF;
+  .wp-algolia-search-mobi-view {
+
+    .ais-SearchBox {
+      position: relative;
+      border-top: 1px solid #EEEEEE;
+      .ais-SearchBox-input {
+        padding: 12px 20px 12px 80px;
+        border: none;
+        border-radius: 0;
+      }
+      .ais-SearchBox-submit,
+      .ais-SearchBox-reset {
+        position: absolute;
+        top: 0;
+        left: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: #FFFFFF;
+        border: none;
+        padding: 0;
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+      .ais-SearchBox-reset {
+        display: none;
+        left: auto;
+        right: 0;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+        &[hidden] {
+          display: none;
+        }
+      }
+    }
+    .meta-info-instant-search {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0;
+      padding: 12px 20px;
+      background: #F5F5F5;
+      .meta-item {
+        &:last-child {
+          white-space: nowrap;
+        }
+      }
+    }
+    .ais-Hits {
+      max-height: calc(100vh - 300px);
+      overflow: auto;
+      .ais-Hits-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        .ais-Hits-item {
+          width: 50%;
+          padding: 10px 20px;
+          border-bottom: solid 1px #eee;
+        }
+        .hit-item {
+          display: flex;
+          align-items: center;
+          &__thumbnail {
+            width: 100px;
+          }
+          &__entry {
+            width: calc(100% - 100px);
+            padding-left: 20px;
+            .__title {
+              font-size: 16px;
+              line-height: 1.3;
+              margin: 0 0 8px;
+              svg {
+                display: inline-block;
+                vertical-align: middle;
+              }
+            }
+            .__price {
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 1.5;
+              color: #212121;
+            }
+          }
+        }
+      }
+    }
+    .ais-Pagination {
+      .ais-Pagination-list {
+        justify-content: center;
+        padding: 10px 17px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ais-Pagination-item {
+          list-style: none;
+          margin: 3px;
+          padding: 3px;
+          font-weight: bold;
+          font-size: 1.1em;
+
+          a, .ais-Pagination-link {
+            color: #212121 !important;
+          }
+
+          &.ais-Pagination-item--selected {
+
+            a {
+              color: #BE9D4F !important;
+            }
+          }
+
+          &.ais-Pagination-item--firstPage {
+            margin-right: auto;
+          }
+
+          &.ais-Pagination-item--lastPage {
+            margin-left: auto;
+          }
+
+          &.ais-Pagination-item--disabled {
+            opacity: .3;
+          }
+        }
+      }
+    }
+
+    @media(max-width: 767.98px) {
+      .ais-Hits .ais-Hits-list .ais-Hits-item {
+        width: 100%;
+      }
+    }
+
+    @media(max-width: 479.98px) {
+      .ais-SearchBox {
+        .ais-SearchBox-input {
+          padding: 12px 20px 12px 60px;
+        }
+        .ais-SearchBox-submit,
+        .ais-SearchBox-reset {
+          left: 0;
+          width: 40px;
+        }
+        .ais-SearchBox-reset {
+          left: auto;
+        }
+      }
+      .meta-info-instant-search {
+        padding: 12px 10px;
+      }
+      .ais-Hits .ais-Hits-list {
+        .ais-Hits-item {
+          padding: 10px;
+        }
+        .hit-item__entry {
+          padding-left: 10px;
+        }
+      }
+      .ais-Pagination .ais-Pagination-list {
+        padding: 10px 7px;
+      }
+    }
+
   }
 }

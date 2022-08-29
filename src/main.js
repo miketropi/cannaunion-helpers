@@ -9,6 +9,13 @@ import algoliaSearchInit from "./app/algolia-search";
   const ready = () => {
     algoliaSearchInit();
   }
-  
+  $('.header-icon-tools .search-icon').on("click", function(event) {
+    event.preventDefault();
+
+    $(this).parents('.elementor-shortcode').toggleClass('wp-algolia-search-mobi-view--active');
+  });
+
+
+
   $(ready);
-})(window, jQuery); 
+})(window, jQuery);

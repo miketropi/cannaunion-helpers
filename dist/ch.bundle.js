@@ -48445,6 +48445,10 @@ __webpack_require__.r(__webpack_exports__);
     (0,_app_algolia_search__WEBPACK_IMPORTED_MODULE_0__["default"])();
   };
 
+  $('.header-icon-tools .search-icon').on("click", function (event) {
+    event.preventDefault();
+    $(this).parents('.elementor-shortcode').toggleClass('wp-algolia-search-mobi-view--active');
+  });
   $(ready);
 })(window, jQuery);
 })();

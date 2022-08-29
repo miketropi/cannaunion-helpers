@@ -192,12 +192,201 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   margin-right: 1.2em;
 }
 .header-icon-tools li.__item a {
+  position: relative;
   display: inline-block;
 }
 .header-icon-tools li.__item span.__icon {
   display: inline-block;
   width: 20px;
+  transition: all 0.3s;
 }
 .header-icon-tools li.__item span.__icon svg {
   width: 100%;
+}
+.header-icon-tools li.__item span.__close {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.header-icon-tools li.__item span.__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.wp-algolia-search-mobi-view--active .header-icon-tools li.__item span.__icon {
+  opacity: 0;
+}
+.wp-algolia-search-mobi-view--active .header-icon-tools li.__item span.__close {
+  opacity: 1;
+  visibility: visible;
+}
+.wp-algolia-search-mobi-view--active .wp-algolia-search-mobi-view-wrapper {
+  display: block;
+}
+
+.wp-algolia-search-mobi-view-wrapper {
+  display: none;
+  position: absolute;
+  top: calc(100% + 14px);
+  right: -20px;
+  width: 100vw;
+  height: 100vh;
+  background: #FFFFFF;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox {
+  position: relative;
+  border-top: 1px solid #EEEEEE;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-input {
+  padding: 12px 20px 12px 80px;
+  border: none;
+  border-radius: 0;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-submit,
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-reset {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  border: none;
+  padding: 0;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-submit svg,
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-reset svg {
+  width: 18px;
+  height: 18px;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-reset {
+  display: none;
+  left: auto;
+  right: 0;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-reset svg {
+  width: 16px;
+  height: 16px;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-reset[hidden] {
+  display: none;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .meta-info-instant-search {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 12px 20px;
+  background: #F5F5F5;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .meta-info-instant-search .meta-item:last-child {
+  white-space: nowrap;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits {
+  max-height: calc(100vh - 300px);
+  overflow: auto;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .ais-Hits-item {
+  width: 50%;
+  padding: 10px 20px;
+  border-bottom: solid 1px #eee;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .hit-item {
+  display: flex;
+  align-items: center;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .hit-item__thumbnail {
+  width: 100px;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .hit-item__entry {
+  width: calc(100% - 100px);
+  padding-left: 20px;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .hit-item__entry .__title {
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .hit-item__entry .__title svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .hit-item__entry .__price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #212121;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list {
+  justify-content: center;
+  padding: 10px 17px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list .ais-Pagination-item {
+  list-style: none;
+  margin: 3px;
+  padding: 3px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list .ais-Pagination-item a, .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list .ais-Pagination-item .ais-Pagination-link {
+  color: #212121 !important;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list .ais-Pagination-item.ais-Pagination-item--selected a {
+  color: #BE9D4F !important;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list .ais-Pagination-item.ais-Pagination-item--firstPage {
+  margin-right: auto;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list .ais-Pagination-item.ais-Pagination-item--lastPage {
+  margin-left: auto;
+}
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list .ais-Pagination-item.ais-Pagination-item--disabled {
+  opacity: 0.3;
+}
+@media (max-width: 767.98px) {
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .ais-Hits-item {
+    width: 100%;
+  }
+}
+@media (max-width: 479.98px) {
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-input {
+    padding: 12px 20px 12px 60px;
+  }
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-submit,
+.wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-reset {
+    left: 0;
+    width: 40px;
+  }
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-SearchBox .ais-SearchBox-reset {
+    left: auto;
+  }
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .meta-info-instant-search {
+    padding: 12px 10px;
+  }
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .ais-Hits-item {
+    padding: 10px;
+  }
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Hits .ais-Hits-list .hit-item__entry {
+    padding-left: 10px;
+  }
+  .wp-algolia-search-mobi-view-wrapper .wp-algolia-search-mobi-view .ais-Pagination .ais-Pagination-list {
+    padding: 10px 7px;
+  }
 }
