@@ -10,6 +10,7 @@
   color: #3b3b3b;
   font-family: Arial;
   cursor: pointer;
+  min-width: 131px;
 }
 .wp-algolia-search-icon span.__icon {
   display: inline-block;

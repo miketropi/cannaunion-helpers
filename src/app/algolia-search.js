@@ -10,16 +10,23 @@ import {
   Pagination } from 'react-instantsearch-hooks-web';
 
 const { algolia } = CH_PHP_DATA;
-const searchClient = algoliasearch(algolia.AppID, algolia.AdminAPIKey);
+const { AppID, AdminAPIKey, searchIndex, searchInputPlaceholder } = {
+  AppID: '', 
+  AdminAPIKey: '', 
+  searchIndex: '', 
+  searchInputPlaceholder: 'Search for products...',
+  ...algolia
+}
+const searchClient = algoliasearch(AppID, AdminAPIKey);
 
 /**
- * App component
+ * App component 
  * @returns 
  */
 const AlgoliaSearchApp = () => {
-  return <InstantSearch searchClient={ searchClient } indexName="wp_posts_product">
+  return <InstantSearch searchClient={ searchClient } indexName={ searchIndex }>
     <Configure hitsPerPage={ 6 } />
-    <SearchBox placeholder="Search for products..." />
+    <SearchBox placeholder={ searchInputPlaceholder } />
     <MetaInfoInstantSearch />
     <Hits hitComponent={ Hit } />
     <Pagination />
@@ -90,6 +97,23 @@ const algoliaSearchModal = () => {
     e.preventDefault();
     document.body.classList.remove('algolia-search-modal-active');
   })
+
+  const escKeyDown = () => {
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      let isEscape = false;
+      if ("key" in evt) {
+        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+      } else {
+        isEscape = (evt.keyCode === 27);
+      }
+      if (isEscape) {
+        document.body.classList.remove('algolia-search-modal-active');
+      }
+    };
+  }
+
+  escKeyDown();
 }
 
 const algoliaSearchInit = () => { 

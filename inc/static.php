@@ -15,6 +15,8 @@ function ch_enqueue_scripts() {
     'algolia' => [
       'AppID' => get_option('algolia_application_id'),
       'AdminAPIKey' => get_option('algolia_api_key'),
+      'searchIndex' => get_field('algolia_search_index', 'option'),
+      'searchInputPlaceholder' => get_field('algolia_search_input_placeholder', 'option'),
     ],
     'lang' => []
   ]);

@@ -5837,20 +5837,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 var _CH_PHP_DATA = CH_PHP_DATA,
     algolia = _CH_PHP_DATA.algolia;
-var searchClient = algoliasearch_lite__WEBPACK_IMPORTED_MODULE_2___default()(algolia.AppID, algolia.AdminAPIKey);
+
+var _AppID$AdminAPIKey$se = _objectSpread({
+  AppID: '',
+  AdminAPIKey: '',
+  searchIndex: '',
+  searchInputPlaceholder: 'Search for products...'
+}, algolia),
+    AppID = _AppID$AdminAPIKey$se.AppID,
+    AdminAPIKey = _AppID$AdminAPIKey$se.AdminAPIKey,
+    searchIndex = _AppID$AdminAPIKey$se.searchIndex,
+    searchInputPlaceholder = _AppID$AdminAPIKey$se.searchInputPlaceholder;
+
+var searchClient = algoliasearch_lite__WEBPACK_IMPORTED_MODULE_2___default()(AppID, AdminAPIKey);
 /**
- * App component
+ * App component 
  * @returns 
  */
 
 var AlgoliaSearchApp = function AlgoliaSearchApp() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_3__.InstantSearch, {
     searchClient: searchClient,
-    indexName: "wp_posts_product",
+    indexName: searchIndex,
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__.Configure, {
       hitsPerPage: 6
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.SearchBox, {
-      placeholder: "Search for products..."
+      placeholder: searchInputPlaceholder
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MetaInfoInstantSearch, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__.Hits, {
       hitComponent: Hit
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__.Pagination, {})]
@@ -5958,6 +5970,25 @@ var algoliaSearchModal = function algoliaSearchModal() {
     e.preventDefault();
     document.body.classList.remove('algolia-search-modal-active');
   });
+
+  var escKeyDown = function escKeyDown() {
+    document.onkeydown = function (evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+
+      if ("key" in evt) {
+        isEscape = evt.key === "Escape" || evt.key === "Esc";
+      } else {
+        isEscape = evt.keyCode === 27;
+      }
+
+      if (isEscape) {
+        document.body.classList.remove('algolia-search-modal-active');
+      }
+    };
+  };
+
+  escKeyDown();
 };
 
 var algoliaSearchInit = function algoliaSearchInit() {
