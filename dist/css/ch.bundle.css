@@ -230,8 +230,8 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .wp-algolia-search-mobi-view-wrapper {
   display: none;
   position: absolute;
-  top: calc(100% + 14px);
-  right: -20px;
+  top: 100%;
+  right: 0;
   width: 100vw;
   height: 100vh;
   background: #FFFFFF;
