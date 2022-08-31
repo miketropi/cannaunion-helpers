@@ -5802,19 +5802,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! algoliasearch/lite */ "./node_modules/algoliasearch/dist/algoliasearch-lite.umd.js");
-/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(algoliasearch_lite__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/InstantSearch.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/Configure.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/SearchBox.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Hits.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Pagination.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/ClearRefinements.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/RefinementList.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/CurrentRefinements.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/hooks/useInstantSearch.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Highlight.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! algoliasearch/lite */ "./node_modules/algoliasearch/dist/algoliasearch-lite.umd.js");
+/* harmony import */ var algoliasearch_lite__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(algoliasearch_lite__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_AlgoliaSearchPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AlgoliaSearchPage */ "./src/components/AlgoliaSearchPage.js");
+/* harmony import */ var _components_MetaInfoInstantSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/MetaInfoInstantSearch */ "./src/components/MetaInfoInstantSearch.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/InstantSearch.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/Configure.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/SearchBox.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Hits.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Pagination.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/hooks/useInstantSearch.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Highlight.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -5838,6 +5837,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
 var _CH_PHP_DATA = CH_PHP_DATA,
     algolia = _CH_PHP_DATA.algolia;
 
@@ -5852,143 +5853,28 @@ var _AppID$AdminAPIKey$se = _objectSpread({
     searchIndex = _AppID$AdminAPIKey$se.searchIndex,
     searchInputPlaceholder = _AppID$AdminAPIKey$se.searchInputPlaceholder;
 
-var searchClient = algoliasearch_lite__WEBPACK_IMPORTED_MODULE_2___default()(AppID, AdminAPIKey);
+var searchClient = algoliasearch_lite__WEBPACK_IMPORTED_MODULE_4___default()(AppID, AdminAPIKey);
 /**
  * App component
  * @returns
  */
 
 var AlgoliaSearchApp = function AlgoliaSearchApp() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_3__.InstantSearch, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.InstantSearch, {
     searchClient: searchClient,
     indexName: searchIndex,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__.Configure, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__.Configure, {
       hitsPerPage: 6
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.SearchBox, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__.SearchBox, {
       placeholder: searchInputPlaceholder
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MetaInfoInstantSearch, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__.Hits, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_MetaInfoInstantSearch__WEBPACK_IMPORTED_MODULE_2__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_8__.Hits, {
       hitComponent: Hit
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__.Pagination, {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.Pagination, {})]
   });
 };
 
-var AlgoliaSearchPage = function AlgoliaSearchPage() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_3__.InstantSearch, {
-    searchClient: searchClient,
-    indexName: searchIndex,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "ais-serach-app",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.SearchBox, {
-        placeholder: searchInputPlaceholder
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "ais-serach-results",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "ais-filters-col",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-clear-refinements",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-            children: "Filters"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_8__.ClearRefinements, {})]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.pa_amount"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.pa_amount",
-            limit: 5,
-            showMore: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.pa_aroma"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.pa_aroma",
-            limit: 5,
-            showMore: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.pa_bottle-type"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.pa_bottle-type",
-            limit: 5,
-            showMore: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.pa_brand"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.pa_brand",
-            limit: 5,
-            showMore: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.pa_color"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.pa_color",
-            limit: 5,
-            showMore: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.pa_falvours"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.pa_falvours",
-            limit: 5,
-            showMore: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.pa_flavour"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.pa_flavour",
-            limit: 5,
-            showMore: true
-          })]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "ais-filters-item ais-refinementlist",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
-            className: "ais-filter-title",
-            children: "taxonomies.product_cat"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_9__.RefinementList, {
-            attribute: "taxonomies.product_cat",
-            limit: 5,
-            showMore: true
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "ais-results-col",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "results-meta",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MetaInfoInstantSearch, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_10__.CurrentRefinements, {})]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "results-product",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__.Hits, {
-            hitComponent: Hit
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__.Pagination, {})]
-        })]
-      })]
-    })]
-  });
-};
-
-var MetaInfoInstantSearch = function MetaInfoInstantSearch() {
-  var _useInstantSearch = (0,react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_11__.useInstantSearch)(),
+var __MetaInfoInstantSearch = function __MetaInfoInstantSearch() {
+  var _useInstantSearch = (0,react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_10__.useInstantSearch)(),
       indexUiState = _useInstantSearch.indexUiState,
       setIndexUiState = _useInstantSearch.setIndexUiState,
       uiState = _useInstantSearch.uiState,
@@ -6005,16 +5891,16 @@ var MetaInfoInstantSearch = function MetaInfoInstantSearch() {
       query = _query$nbHits$results.query,
       nbHits = _query$nbHits$results.nbHits;
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
     className: "meta-info-instant-search",
-    children: [query != '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+    children: [query != '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
       className: "meta-item",
-      children: ["Search: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("mark", {
+      children: ["Search: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("mark", {
         children: ["\"", query, "\""]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("li", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("li", {
       className: "meta-item",
-      children: ["Result: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("mark", {
+      children: ["Result: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("mark", {
         children: nbHits
       }), " item(s)"]
     })]
@@ -6031,38 +5917,38 @@ var Hit = function Hit(_ref) {
   var _hit$images, _hit$images$thumbnail;
 
   var hit = _ref.hit;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
     className: "hit-item",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
       href: hit.permalink,
       className: "hit-item__thumbnail",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
         src: (_hit$images = hit.images) === null || _hit$images === void 0 ? void 0 : (_hit$images$thumbnail = _hit$images.thumbnail) === null || _hit$images$thumbnail === void 0 ? void 0 : _hit$images$thumbnail.url
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "hit-item__entry",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
         className: "__title",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
           href: hit.permalink,
           target: "_blank",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_12__.Highlight, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_11__.Highlight, {
             hit: hit,
             attribute: "post_title"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {
             width: "24px",
             height: "24px",
             viewBox: "-6 -6.5 24 24",
             xmlns: "http://www.w3.org/2000/svg",
             preserveAspectRatio: "xMinYMin",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("path", {
               d: "M7.828 2.414H2.243a1 1 0 1 1 0-2h8a.997.997 0 0 1 1 1v8a1 1 0 0 1-2 0V3.828l-6.779 6.779A1 1 0 0 1 1.05 9.192l6.778-6.778z"
             })
           })]
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "__price",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           dangerouslySetInnerHTML: {
             __html: hit.price_html
           }
@@ -6115,7 +6001,7 @@ var algoliaSearchInit = function algoliaSearchInit() {
 
   _toConsumableArray(elems).forEach(function (el) {
     var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(el);
-    root.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(AlgoliaSearchApp, {}));
+    root.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(AlgoliaSearchApp, {}));
   }); // const root = createRoot(elem);
   // root.render(<AlgoliaSearchApp />);
   // Modal
@@ -6128,11 +6014,395 @@ var algoliaSearchInit = function algoliaSearchInit() {
 
   _toConsumableArray(sp_elems).forEach(function (el) {
     var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(el);
-    root.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(AlgoliaSearchPage, {}));
+    root.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_AlgoliaSearchPage__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      algoliaConfig: algolia,
+      searchClient: searchClient,
+      indexName: searchIndex
+    }));
   });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (algoliaSearchInit);
+
+/***/ }),
+
+/***/ "./src/components/AlgoliaSearchPage.js":
+/*!*********************************************!*\
+  !*** ./src/components/AlgoliaSearchPage.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/InstantSearch.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/Configure.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/SearchBox.js");
+/* harmony import */ var _components_SearchSidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SearchSidebar */ "./src/components/SearchSidebar.js");
+/* harmony import */ var _components_SearchContent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SearchContent */ "./src/components/SearchContent.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+var DEBOUNCE_TIME = 400;
+
+var AlgoliaSearchPage = function AlgoliaSearchPage(_ref) {
+  var searchClient = _ref.searchClient,
+      indexName = _ref.indexName,
+      algoliaConfig = _ref.algoliaConfig;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__.InstantSearch, {
+    searchClient: searchClient,
+    indexName: indexName,
+    routing: true,
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.Configure, {
+      hitsPerPage: 10
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "algolia-search-page-summary",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "search__header",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__.SearchBox, {
+          placeholder: algoliaConfig.searchInputPlaceholder
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_SearchSidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_SearchContent__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AlgoliaSearchPage);
+
+/***/ }),
+
+/***/ "./src/components/MetaInfoInstantSearch.js":
+/*!*************************************************!*\
+  !*** ./src/components/MetaInfoInstantSearch.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/hooks/useInstantSearch.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+var MetaInfoInstantSearch = function MetaInfoInstantSearch() {
+  var _useInstantSearch = (0,react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__.useInstantSearch)(),
+      results = _useInstantSearch.results;
+
+  var _query$nbHits$results = _objectSpread({
+    query: '',
+    nbHits: 0
+  }, results === null || results === void 0 ? void 0 : results._rawResults[0]),
+      query = _query$nbHits$results.query,
+      nbHits = _query$nbHits$results.nbHits;
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+    className: "meta-info-instant-search",
+    children: [query != '' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+      className: "meta-item",
+      children: ["Search: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("mark", {
+        children: ["\"", query, "\""]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+      className: "meta-item",
+      children: ["Result: ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("mark", {
+        children: nbHits
+      }), " item(s)"]
+    })]
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MetaInfoInstantSearch);
+
+/***/ }),
+
+/***/ "./src/components/PriceFilter.js":
+/*!***************************************!*\
+  !*** ./src/components/PriceFilter.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/connectors/useNumericMenu.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var PriceFilter = function PriceFilter(_ref) {
+  var title = _ref.title,
+      className = _ref.className;
+
+  var _useNumericMenu = (0,react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__.useNumericMenu)({
+    attribute: 'price_number',
+    items: [{
+      label: 'All'
+    }, {
+      label: 'Less than $10',
+      end: 10
+    }, {
+      label: 'Between $10 - $30',
+      start: 10,
+      end: 30
+    }, {
+      label: 'Between $30 - $50',
+      start: 30,
+      end: 50
+    }, {
+      label: 'More than $50',
+      start: 50
+    }]
+  }),
+      hasNoResults = _useNumericMenu.hasNoResults,
+      items = _useNumericMenu.items,
+      refine = _useNumericMenu.refine;
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    className: ['filter-widget', className].join(' '),
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "filter-widget__inner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h4", {
+        children: title
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ul", {
+        className: "ais-NumericMenu-list",
+        children: items.map(function (item) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", {
+            className: ['ais-NumericMenu-item', item.isRefined && 'ais-NumericMenu-item--selected'].join(' '),
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+              className: "ais-NumericMenu-label",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                className: "ais-NumericMenu-radio",
+                type: "radio",
+                checked: item.isRefined,
+                onChange: function onChange() {
+                  return refine(item.value);
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+                className: "ais-NumericMenu-labelText",
+                children: item.label
+              })]
+            })
+          }, item.value);
+        })
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PriceFilter);
+
+/***/ }),
+
+/***/ "./src/components/RefinementListWidget.js":
+/*!************************************************!*\
+  !*** ./src/components/RefinementListWidget.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/RefinementList.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var RefinementListWidget = function RefinementListWidget(_ref) {
+  var title = _ref.title,
+      attr = _ref.attr,
+      limit = _ref.limit,
+      more = _ref.more,
+      className = _ref.className;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    className: ['filter-widget', className].join(' '),
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "filter-widget__inner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h4", {
+        children: title
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__.RefinementList, {
+        attribute: attr,
+        limit: limit,
+        showMore: more
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RefinementListWidget);
+
+/***/ }),
+
+/***/ "./src/components/SearchContent.js":
+/*!*****************************************!*\
+  !*** ./src/components/SearchContent.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Highlight.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/CurrentRefinements.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Hits.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Pagination.js");
+/* harmony import */ var _MetaInfoInstantSearch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MetaInfoInstantSearch */ "./src/components/MetaInfoInstantSearch.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+var Hit = function Hit(_ref) {
+  var _hit$images, _hit$images$thumbnail;
+
+  var hit = _ref.hit;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "hit-item",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+      href: hit.permalink,
+      className: "hit-item__thumbnail",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+        src: (_hit$images = hit.images) === null || _hit$images === void 0 ? void 0 : (_hit$images$thumbnail = _hit$images.thumbnail) === null || _hit$images$thumbnail === void 0 ? void 0 : _hit$images$thumbnail.url
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "hit-item__entry",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
+        className: "__title",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+          href: hit.permalink,
+          target: "_blank",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_2__.Highlight, {
+            hit: hit,
+            attribute: "post_title"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+            width: "24px",
+            height: "24px",
+            viewBox: "-6 -6.5 24 24",
+            xmlns: "http://www.w3.org/2000/svg",
+            preserveAspectRatio: "xMinYMin",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+              d: "M7.828 2.414H2.243a1 1 0 1 1 0-2h8a.997.997 0 0 1 1 1v8a1 1 0 0 1-2 0V3.828l-6.779 6.779A1 1 0 0 1 1.05 9.192l6.778-6.778z"
+            })
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "__price",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          dangerouslySetInnerHTML: {
+            __html: hit.price_html
+          }
+        })
+      })]
+    })]
+  });
+};
+
+var SeachContent = function SeachContent() {
+  var labelMap = {
+    'taxonomies.product_cat': 'Category',
+    'price_number': 'Price'
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "search-content",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "search-content__inner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "meta-current-seach",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_MetaInfoInstantSearch__WEBPACK_IMPORTED_MODULE_0__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_3__.CurrentRefinements, {
+          transformItems: function transformItems(items) {
+            return items.map(function (item) {
+              var label = labelMap[item.label] ? labelMap[item.label] : item.label;
+              return _objectSpread(_objectSpread({}, item), {}, {
+                label: label
+              });
+            });
+          }
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__.Hits, {
+        hitComponent: Hit
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.Pagination, {})]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SeachContent);
+
+/***/ }),
+
+/***/ "./src/components/SearchSidebar.js":
+/*!*****************************************!*\
+  !*** ./src/components/SearchSidebar.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _RefinementListWidget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RefinementListWidget */ "./src/components/RefinementListWidget.js");
+/* harmony import */ var _PriceFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PriceFilter */ "./src/components/PriceFilter.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+var SearchSidebar = function SearchSidebar() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    className: "search-sidebar",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "search-sidebar__inner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "search-sidebar__heading",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
+          children: "Filter"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_RefinementListWidget__WEBPACK_IMPORTED_MODULE_0__["default"], {
+        title: "Category",
+        attr: "taxonomies.product_cat",
+        limit: 10,
+        more: true
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_PriceFilter__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        title: "Price"
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchSidebar);
 
 /***/ }),
 
@@ -42299,186 +42569,6 @@ function _unsupportedIterableToArray(o, minLen) {
 
 /***/ }),
 
-/***/ "./node_modules/instantsearch.js/es/connectors/clear-refinements/connectClearRefinements.js":
-/*!**************************************************************************************************!*\
-  !*** ./node_modules/instantsearch.js/es/connectors/clear-refinements/connectClearRefinements.js ***!
-  \**************************************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/documentation.js");
-/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/noop.js");
-/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/checkRendering.js");
-/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/clearRefinements.js");
-/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/mergeSearchParameters.js");
-/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/uniq.js");
-/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/getRefinements.js");
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-var withUsage = (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_0__.createDocumentationMessageGenerator)({
-  name: 'clear-refinements',
-  connector: true
-});
-
-var connectClearRefinements = function connectClearRefinements(renderFn) {
-  var unmountFn = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__["default"];
-  (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_2__["default"])(renderFn, withUsage());
-  return function (widgetParams) {
-    var _ref = widgetParams || {},
-        _ref$includedAttribut = _ref.includedAttributes,
-        includedAttributes = _ref$includedAttribut === void 0 ? [] : _ref$includedAttribut,
-        _ref$excludedAttribut = _ref.excludedAttributes,
-        excludedAttributes = _ref$excludedAttribut === void 0 ? ['query'] : _ref$excludedAttribut,
-        _ref$transformItems = _ref.transformItems,
-        transformItems = _ref$transformItems === void 0 ? function (items) {
-      return items;
-    } : _ref$transformItems;
-
-    if (widgetParams && widgetParams.includedAttributes && widgetParams.excludedAttributes) {
-      throw new Error(withUsage('The options `includedAttributes` and `excludedAttributes` cannot be used together.'));
-    }
-
-    var connectorState = {
-      refine: _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-      createURL: function createURL() {
-        return '';
-      },
-      attributesToClear: []
-    };
-
-    var cachedRefine = function cachedRefine() {
-      return connectorState.refine();
-    };
-
-    var cachedCreateURL = function cachedCreateURL() {
-      return connectorState.createURL();
-    };
-
-    return {
-      $$type: 'ais.clearRefinements',
-      init: function init(initOptions) {
-        var instantSearchInstance = initOptions.instantSearchInstance;
-        renderFn(_objectSpread(_objectSpread({}, this.getWidgetRenderState(initOptions)), {}, {
-          instantSearchInstance: instantSearchInstance
-        }), true);
-      },
-      render: function render(renderOptions) {
-        var instantSearchInstance = renderOptions.instantSearchInstance;
-        renderFn(_objectSpread(_objectSpread({}, this.getWidgetRenderState(renderOptions)), {}, {
-          instantSearchInstance: instantSearchInstance
-        }), false);
-      },
-      dispose: function dispose() {
-        unmountFn();
-      },
-      getRenderState: function getRenderState(renderState, renderOptions) {
-        return _objectSpread(_objectSpread({}, renderState), {}, {
-          clearRefinements: this.getWidgetRenderState(renderOptions)
-        });
-      },
-      getWidgetRenderState: function getWidgetRenderState(_ref2) {
-        var createURL = _ref2.createURL,
-            scopedResults = _ref2.scopedResults,
-            results = _ref2.results;
-        connectorState.attributesToClear = scopedResults.reduce(function (attributesToClear, scopedResult) {
-          return attributesToClear.concat(getAttributesToClear({
-            scopedResult: scopedResult,
-            includedAttributes: includedAttributes,
-            excludedAttributes: excludedAttributes,
-            transformItems: transformItems,
-            results: results
-          }));
-        }, []);
-
-        connectorState.refine = function () {
-          connectorState.attributesToClear.forEach(function (_ref3) {
-            var indexHelper = _ref3.helper,
-                items = _ref3.items;
-            indexHelper.setState((0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__["default"])({
-              helper: indexHelper,
-              attributesToClear: items
-            })).search();
-          });
-        };
-
-        connectorState.createURL = function () {
-          return createURL(_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_4__["default"].apply(void 0, _toConsumableArray(connectorState.attributesToClear.map(function (_ref4) {
-            var indexHelper = _ref4.helper,
-                items = _ref4.items;
-            return (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__["default"])({
-              helper: indexHelper,
-              attributesToClear: items
-            });
-          }))));
-        };
-
-        var canRefine = connectorState.attributesToClear.some(function (attributeToClear) {
-          return attributeToClear.items.length > 0;
-        });
-        return {
-          canRefine: canRefine,
-          hasRefinements: canRefine,
-          refine: cachedRefine,
-          createURL: cachedCreateURL,
-          widgetParams: widgetParams
-        };
-      }
-    };
-  };
-};
-
-function getAttributesToClear(_ref5) {
-  var scopedResult = _ref5.scopedResult,
-      includedAttributes = _ref5.includedAttributes,
-      excludedAttributes = _ref5.excludedAttributes,
-      transformItems = _ref5.transformItems,
-      results = _ref5.results;
-  var includesQuery = includedAttributes.indexOf('query') !== -1 || excludedAttributes.indexOf('query') === -1;
-  return {
-    helper: scopedResult.helper,
-    items: transformItems((0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_5__["default"])((0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_6__["default"])(scopedResult.results, scopedResult.helper.state, includesQuery).map(function (refinement) {
-      return refinement.attribute;
-    }).filter(function (attribute) {
-      return (// If the array is empty (default case), we keep all the attributes
-        includedAttributes.length === 0 || // Otherwise, only add the specified attributes
-        includedAttributes.indexOf(attribute) !== -1
-      );
-    }).filter(function (attribute) {
-      return (// If the query is included, we ignore the default `excludedAttributes = ['query']`
-        attribute === 'query' && includesQuery || // Otherwise, ignore the excluded attributes
-        excludedAttributes.indexOf(attribute) === -1
-      );
-    })), {
-      results: results
-    })
-  };
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectClearRefinements);
-
-/***/ }),
-
 /***/ "./node_modules/instantsearch.js/es/connectors/configure/connectConfigure.js":
 /*!***********************************************************************************!*\
   !*** ./node_modules/instantsearch.js/es/connectors/configure/connectConfigure.js ***!
@@ -42982,6 +43072,305 @@ var connectHits = function connectHits(renderFn) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectHits);
+
+/***/ }),
+
+/***/ "./node_modules/instantsearch.js/es/connectors/numeric-menu/connectNumericMenu.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/instantsearch.js/es/connectors/numeric-menu/connectNumericMenu.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/documentation.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/noop.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/checkRendering.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/isFiniteNumber.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var withUsage = (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_0__.createDocumentationMessageGenerator)({
+  name: 'numeric-menu',
+  connector: true
+});
+var $$type = 'ais.numericMenu';
+
+var createSendEvent = function createSendEvent(_ref) {
+  var instantSearchInstance = _ref.instantSearchInstance;
+  return function () {
+    if (arguments.length === 1) {
+      instantSearchInstance.sendEventToInsights(arguments.length <= 0 ? undefined : arguments[0]);
+      return;
+    }
+  };
+};
+
+var connectNumericMenu = function connectNumericMenu(renderFn) {
+  var unmountFn = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__["default"];
+  (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_2__["default"])(renderFn, withUsage());
+  return function (widgetParams) {
+    var _ref2 = widgetParams || {},
+        _ref2$attribute = _ref2.attribute,
+        attribute = _ref2$attribute === void 0 ? '' : _ref2$attribute,
+        _ref2$items = _ref2.items,
+        items = _ref2$items === void 0 ? [] : _ref2$items,
+        _ref2$transformItems = _ref2.transformItems,
+        transformItems = _ref2$transformItems === void 0 ? function (item) {
+      return item;
+    } : _ref2$transformItems;
+
+    if (attribute === '') {
+      throw new Error(withUsage('The `attribute` option is required.'));
+    }
+
+    if (!items || items.length === 0) {
+      throw new Error(withUsage('The `items` option expects an array of objects.'));
+    }
+
+    var prepareItems = function prepareItems(state) {
+      return items.map(function (_ref3) {
+        var start = _ref3.start,
+            end = _ref3.end,
+            label = _ref3.label;
+        return {
+          label: label,
+          value: encodeURI(JSON.stringify({
+            start: start,
+            end: end
+          })),
+          isRefined: isRefined(state, attribute, {
+            start: start,
+            end: end,
+            label: label
+          })
+        };
+      });
+    };
+
+    var connectorState = {};
+    return {
+      $$type: $$type,
+      init: function init(initOptions) {
+        var instantSearchInstance = initOptions.instantSearchInstance;
+        renderFn(_objectSpread(_objectSpread({}, this.getWidgetRenderState(initOptions)), {}, {
+          instantSearchInstance: instantSearchInstance
+        }), true);
+      },
+      render: function render(renderOptions) {
+        var instantSearchInstance = renderOptions.instantSearchInstance;
+        renderFn(_objectSpread(_objectSpread({}, this.getWidgetRenderState(renderOptions)), {}, {
+          instantSearchInstance: instantSearchInstance
+        }), false);
+      },
+      dispose: function dispose(_ref4) {
+        var state = _ref4.state;
+        unmountFn();
+        return state.clearRefinements(attribute);
+      },
+      getWidgetUiState: function getWidgetUiState(uiState, _ref5) {
+        var searchParameters = _ref5.searchParameters;
+        var values = searchParameters.getNumericRefinements(attribute);
+        var equal = values['='] && values['='][0];
+
+        if (equal || equal === 0) {
+          return _objectSpread(_objectSpread({}, uiState), {}, {
+            numericMenu: _objectSpread(_objectSpread({}, uiState.numericMenu), {}, _defineProperty({}, attribute, "".concat(values['='])))
+          });
+        }
+
+        var min = values['>='] && values['>='][0] || '';
+        var max = values['<='] && values['<='][0] || '';
+
+        if (min === '' && max === '') {
+          return uiState;
+        }
+
+        return _objectSpread(_objectSpread({}, uiState), {}, {
+          numericMenu: _objectSpread(_objectSpread({}, uiState.numericMenu), {}, _defineProperty({}, attribute, "".concat(min, ":").concat(max)))
+        });
+      },
+      getWidgetSearchParameters: function getWidgetSearchParameters(searchParameters, _ref6) {
+        var uiState = _ref6.uiState;
+        var value = uiState.numericMenu && uiState.numericMenu[attribute];
+        var withoutRefinements = searchParameters.clearRefinements(attribute);
+
+        if (!value) {
+          return withoutRefinements.setQueryParameters({
+            numericRefinements: _objectSpread(_objectSpread({}, withoutRefinements.numericRefinements), {}, _defineProperty({}, attribute, {}))
+          });
+        }
+
+        var isExact = value.indexOf(':') === -1;
+
+        if (isExact) {
+          return withoutRefinements.addNumericRefinement(attribute, '=', Number(value));
+        }
+
+        var _value$split$map = value.split(':').map(parseFloat),
+            _value$split$map2 = _slicedToArray(_value$split$map, 2),
+            min = _value$split$map2[0],
+            max = _value$split$map2[1];
+
+        var withMinRefinement = (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__["default"])(min) ? withoutRefinements.addNumericRefinement(attribute, '>=', min) : withoutRefinements;
+        var withMaxRefinement = (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__["default"])(max) ? withMinRefinement.addNumericRefinement(attribute, '<=', max) : withMinRefinement;
+        return withMaxRefinement;
+      },
+      getRenderState: function getRenderState(renderState, renderOptions) {
+        return _objectSpread(_objectSpread({}, renderState), {}, {
+          numericMenu: _objectSpread(_objectSpread({}, renderState.numericMenu), {}, _defineProperty({}, attribute, this.getWidgetRenderState(renderOptions)))
+        });
+      },
+      getWidgetRenderState: function getWidgetRenderState(_ref7) {
+        var results = _ref7.results,
+            state = _ref7.state,
+            instantSearchInstance = _ref7.instantSearchInstance,
+            helper = _ref7.helper,
+            createURL = _ref7.createURL;
+
+        if (!connectorState.refine) {
+          connectorState.refine = function (facetValue) {
+            var refinedState = getRefinedState(helper.state, attribute, facetValue);
+            connectorState.sendEvent('click', facetValue);
+            helper.setState(refinedState).search();
+          };
+        }
+
+        if (!connectorState.createURL) {
+          connectorState.createURL = function (newState) {
+            return function (facetValue) {
+              return createURL(getRefinedState(newState, attribute, facetValue));
+            };
+          };
+        }
+
+        if (!connectorState.sendEvent) {
+          connectorState.sendEvent = createSendEvent({
+            instantSearchInstance: instantSearchInstance
+          });
+        }
+
+        return {
+          createURL: connectorState.createURL(state),
+          items: transformItems(prepareItems(state), {
+            results: results
+          }),
+          hasNoResults: results ? results.nbHits === 0 : true,
+          refine: connectorState.refine,
+          sendEvent: connectorState.sendEvent,
+          widgetParams: widgetParams
+        };
+      }
+    };
+  };
+};
+
+function isRefined(state, attribute, option) {
+  // @TODO: same as another spot, why is this mixing arrays & elements?
+  var currentRefinements = state.getNumericRefinements(attribute);
+
+  if (option.start !== undefined && option.end !== undefined) {
+    if (option.start === option.end) {
+      return hasNumericRefinement(currentRefinements, '=', option.start);
+    } else {
+      return hasNumericRefinement(currentRefinements, '>=', option.start) && hasNumericRefinement(currentRefinements, '<=', option.end);
+    }
+  }
+
+  if (option.start !== undefined) {
+    return hasNumericRefinement(currentRefinements, '>=', option.start);
+  }
+
+  if (option.end !== undefined) {
+    return hasNumericRefinement(currentRefinements, '<=', option.end);
+  }
+
+  if (option.start === undefined && option.end === undefined) {
+    return Object.keys(currentRefinements).every(function (operator) {
+      return (currentRefinements[operator] || []).length === 0;
+    });
+  }
+
+  return false;
+}
+
+function getRefinedState(state, attribute, facetValue) {
+  var resolvedState = state;
+  var refinedOption = JSON.parse(decodeURI(facetValue)); // @TODO: why is array / element mixed here & hasRefinements; seems wrong?
+
+  var currentRefinements = resolvedState.getNumericRefinements(attribute);
+
+  if (refinedOption.start === undefined && refinedOption.end === undefined) {
+    return resolvedState.removeNumericRefinement(attribute);
+  }
+
+  if (!isRefined(resolvedState, attribute, refinedOption)) {
+    resolvedState = resolvedState.removeNumericRefinement(attribute);
+  }
+
+  if (refinedOption.start !== undefined && refinedOption.end !== undefined) {
+    if (refinedOption.start > refinedOption.end) {
+      throw new Error('option.start should be > to option.end');
+    }
+
+    if (refinedOption.start === refinedOption.end) {
+      if (hasNumericRefinement(currentRefinements, '=', refinedOption.start)) {
+        resolvedState = resolvedState.removeNumericRefinement(attribute, '=', refinedOption.start);
+      } else {
+        resolvedState = resolvedState.addNumericRefinement(attribute, '=', refinedOption.start);
+      }
+
+      return resolvedState;
+    }
+  }
+
+  if (refinedOption.start !== undefined) {
+    if (hasNumericRefinement(currentRefinements, '>=', refinedOption.start)) {
+      resolvedState = resolvedState.removeNumericRefinement(attribute, '>=', refinedOption.start);
+    }
+
+    resolvedState = resolvedState.addNumericRefinement(attribute, '>=', refinedOption.start);
+  }
+
+  if (refinedOption.end !== undefined) {
+    if (hasNumericRefinement(currentRefinements, '<=', refinedOption.end)) {
+      resolvedState = resolvedState.removeNumericRefinement(attribute, '<=', refinedOption.end);
+    }
+
+    resolvedState = resolvedState.addNumericRefinement(attribute, '<=', refinedOption.end);
+  }
+
+  if (typeof resolvedState.page === 'number') {
+    resolvedState.page = 0;
+  }
+
+  return resolvedState;
+}
+
+function hasNumericRefinement(currentRefinements, operator, value) {
+  return currentRefinements[operator] !== undefined && currentRefinements[operator].includes(value);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectNumericMenu);
 
 /***/ }),
 
@@ -45221,62 +45610,6 @@ function checkRendering(rendering, usage) {
 
 /***/ }),
 
-/***/ "./node_modules/instantsearch.js/es/lib/utils/clearRefinements.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/instantsearch.js/es/lib/utils/clearRefinements.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/**
- * Clears the refinements of a SearchParameters object based on rules provided.
- * The included attributes list is applied before the excluded attributes list. If the list
- * is not provided, this list of all the currently refined attributes is used as included attributes.
- * @param {object} $0 parameters
- * @param {Helper} $0.helper instance of the Helper
- * @param {string[]} [$0.attributesToClear = []] list of parameters to clear
- * @returns {SearchParameters} search parameters with refinements cleared
- */
-function clearRefinements(_ref) {
-  var helper = _ref.helper,
-      _ref$attributesToClea = _ref.attributesToClear,
-      attributesToClear = _ref$attributesToClea === void 0 ? [] : _ref$attributesToClea;
-  var finalState = helper.state.setPage(0);
-  finalState = attributesToClear.reduce(function (state, attribute) {
-    if (finalState.isNumericRefined(attribute)) {
-      return state.removeNumericRefinement(attribute);
-    }
-
-    if (finalState.isHierarchicalFacet(attribute)) {
-      return state.removeHierarchicalFacetRefinement(attribute);
-    }
-
-    if (finalState.isDisjunctiveFacet(attribute)) {
-      return state.removeDisjunctiveFacetRefinement(attribute);
-    }
-
-    if (finalState.isConjunctiveFacet(attribute)) {
-      return state.removeFacetRefinement(attribute);
-    }
-
-    return state;
-  }, finalState);
-
-  if (attributesToClear.indexOf('query') !== -1) {
-    finalState = finalState.setQuery('');
-  }
-
-  return finalState;
-}
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clearRefinements);
-
-/***/ }),
-
 /***/ "./node_modules/instantsearch.js/es/lib/utils/concatHighlightedParts.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/instantsearch.js/es/lib/utils/concatHighlightedParts.js ***!
@@ -46253,6 +46586,28 @@ function isFacetRefined(helper, facet, value) {
     return helper.state.isDisjunctiveFacetRefined(facet, value);
   }
 }
+
+/***/ }),
+
+/***/ "./node_modules/instantsearch.js/es/lib/utils/isFiniteNumber.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/instantsearch.js/es/lib/utils/isFiniteNumber.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// This is the `Number.isFinite()` polyfill recommended by MDN.
+// We do not provide any tests for this function.
+// See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite#Polyfill
+function isFiniteNumber(value) {
+  return typeof value === 'number' && isFinite(value);
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (isFiniteNumber);
 
 /***/ }),
 
@@ -47590,47 +47945,6 @@ function storeRenderState(_ref7) {
 
 /***/ }),
 
-/***/ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/ClearRefinements.js":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/react-instantsearch-hooks-web/dist/es/ui/ClearRefinements.js ***!
-  \***********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ClearRefinements": () => (/* binding */ ClearRefinements)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _lib_cx_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/cx.js */ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/lib/cx.js");
-
-
-var _excluded = ["classNames", "disabled", "onClick", "translations"];
-
-
-function ClearRefinements(_ref) {
-  var _ref$classNames = _ref.classNames,
-      classNames = _ref$classNames === void 0 ? {} : _ref$classNames,
-      _ref$disabled = _ref.disabled,
-      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
-      _ref$onClick = _ref.onClick,
-      onClick = _ref$onClick === void 0 ? function () {} : _ref$onClick,
-      translations = _ref.translations,
-      props = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, _excluded);
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-ClearRefinements', classNames.root, props.className)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("button", {
-    disabled: disabled,
-    onClick: onClick,
-    className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-ClearRefinements-button', classNames.button, disabled && (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-ClearRefinements-button--disabled', classNames.disabledButton))
-  }, translations.resetLabel));
-}
-
-/***/ }),
-
 /***/ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/CurrentRefinements.js":
 /*!*************************************************************************************!*\
   !*** ./node_modules/react-instantsearch-hooks-web/dist/es/ui/CurrentRefinements.js ***!
@@ -48306,56 +48620,6 @@ function isModifierClick(event) {
 
 /***/ }),
 
-/***/ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/ClearRefinements.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/react-instantsearch-hooks-web/dist/es/widgets/ClearRefinements.js ***!
-  \****************************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ClearRefinements": () => (/* binding */ ClearRefinements)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_instantsearch_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-instantsearch-hooks */ "./node_modules/react-instantsearch-hooks/dist/es/connectors/useClearRefinements.js");
-/* harmony import */ var _ui_ClearRefinements_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ui/ClearRefinements.js */ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/ClearRefinements.js");
-
-
-var _excluded = ["includedAttributes", "excludedAttributes", "transformItems"];
-
-
-
-function ClearRefinements(_ref) {
-  var includedAttributes = _ref.includedAttributes,
-      excludedAttributes = _ref.excludedAttributes,
-      transformItems = _ref.transformItems,
-      props = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, _excluded);
-
-  var _useClearRefinements = (0,react_instantsearch_hooks__WEBPACK_IMPORTED_MODULE_3__.useClearRefinements)({
-    includedAttributes: includedAttributes,
-    excludedAttributes: excludedAttributes,
-    transformItems: transformItems
-  }, {
-    $$widgetType: 'ais.clearRefinements'
-  }),
-      canRefine = _useClearRefinements.canRefine,
-      refine = _useClearRefinements.refine;
-
-  var uiProps = {
-    onClick: refine,
-    disabled: !canRefine,
-    translations: {
-      resetLabel: 'Clear refinements'
-    }
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_ui_ClearRefinements_js__WEBPACK_IMPORTED_MODULE_4__.ClearRefinements, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, uiProps));
-}
-
-/***/ }),
-
 /***/ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/CurrentRefinements.js":
 /*!******************************************************************************************!*\
   !*** ./node_modules/react-instantsearch-hooks-web/dist/es/widgets/CurrentRefinements.js ***!
@@ -48880,27 +49144,6 @@ if (true) {
 
 /***/ }),
 
-/***/ "./node_modules/react-instantsearch-hooks/dist/es/connectors/useClearRefinements.js":
-/*!******************************************************************************************!*\
-  !*** ./node_modules/react-instantsearch-hooks/dist/es/connectors/useClearRefinements.js ***!
-  \******************************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useClearRefinements": () => (/* binding */ useClearRefinements)
-/* harmony export */ });
-/* harmony import */ var instantsearch_js_es_connectors_clear_refinements_connectClearRefinements_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! instantsearch.js/es/connectors/clear-refinements/connectClearRefinements.js */ "./node_modules/instantsearch.js/es/connectors/clear-refinements/connectClearRefinements.js");
-/* harmony import */ var _hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../hooks/useConnector.js */ "./node_modules/react-instantsearch-hooks/dist/es/hooks/useConnector.js");
-
-
-function useClearRefinements(props, additionalWidgetProperties) {
-  return (0,_hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__.useConnector)(instantsearch_js_es_connectors_clear_refinements_connectClearRefinements_js__WEBPACK_IMPORTED_MODULE_1__["default"], props, additionalWidgetProperties);
-}
-
-/***/ }),
-
 /***/ "./node_modules/react-instantsearch-hooks/dist/es/connectors/useConfigure.js":
 /*!***********************************************************************************!*\
   !*** ./node_modules/react-instantsearch-hooks/dist/es/connectors/useConfigure.js ***!
@@ -48962,6 +49205,27 @@ __webpack_require__.r(__webpack_exports__);
 
 function useHits(props, additionalWidgetProperties) {
   return (0,_hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__.useConnector)(instantsearch_js_es_connectors_hits_connectHits_js__WEBPACK_IMPORTED_MODULE_1__["default"], props, additionalWidgetProperties);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-instantsearch-hooks/dist/es/connectors/useNumericMenu.js":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/react-instantsearch-hooks/dist/es/connectors/useNumericMenu.js ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useNumericMenu": () => (/* binding */ useNumericMenu)
+/* harmony export */ });
+/* harmony import */ var instantsearch_js_es_connectors_numeric_menu_connectNumericMenu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! instantsearch.js/es/connectors/numeric-menu/connectNumericMenu.js */ "./node_modules/instantsearch.js/es/connectors/numeric-menu/connectNumericMenu.js");
+/* harmony import */ var _hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../hooks/useConnector.js */ "./node_modules/react-instantsearch-hooks/dist/es/hooks/useConnector.js");
+
+
+function useNumericMenu(props, additionalWidgetProperties) {
+  return (0,_hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__.useConnector)(instantsearch_js_es_connectors_numeric_menu_connectNumericMenu_js__WEBPACK_IMPORTED_MODULE_1__["default"], props, additionalWidgetProperties);
 }
 
 /***/ }),

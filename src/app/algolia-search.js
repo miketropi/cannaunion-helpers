@@ -1,5 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import algoliasearch from 'algoliasearch/lite';
+import AlgoliaSearchPage from '../components/AlgoliaSearchPage';
+import MetaInfoInstantSearch from '../components/MetaInfoInstantSearch';
 
 import {
   InstantSearch,
@@ -37,79 +39,7 @@ const AlgoliaSearchApp = () => {
   </InstantSearch>
 }
 
-const AlgoliaSearchPage = () => {
-  return <InstantSearch searchClient={ searchClient } indexName={ searchIndex }>
-    <div className="ais-serach-app">
-      <SearchBox placeholder={ searchInputPlaceholder } />
-    </div>
-
-    <div className="ais-serach-results">
-      <div className="ais-filters-col">
-        <div className="ais-filters-item ais-clear-refinements">
-          <h2>Filters</h2>
-          <ClearRefinements />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.pa_amount</h3>
-          <RefinementList attribute="taxonomies.pa_amount" limit={5} showMore={true} />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.pa_aroma</h3>
-          <RefinementList attribute="taxonomies.pa_aroma" limit={5} showMore={true} />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.pa_bottle-type</h3>
-          <RefinementList attribute="taxonomies.pa_bottle-type" limit={5} showMore={true} />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.pa_brand</h3>
-          <RefinementList attribute="taxonomies.pa_brand" limit={5} showMore={true} />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.pa_color</h3>
-          <RefinementList attribute="taxonomies.pa_color" limit={5} showMore={true} />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.pa_falvours</h3>
-          <RefinementList attribute="taxonomies.pa_falvours" limit={5} showMore={true} />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.pa_flavour</h3>
-          <RefinementList attribute="taxonomies.pa_flavour" limit={5} showMore={true} />
-        </div>
-
-        <div className="ais-filters-item ais-refinementlist">
-          <h3 className="ais-filter-title">taxonomies.product_cat</h3>
-          <RefinementList attribute="taxonomies.product_cat" limit={5} showMore={true} />
-        </div>
-
-      </div>
-
-      <div className="ais-results-col">
-        <div className="results-meta">
-          <MetaInfoInstantSearch />
-          <CurrentRefinements />
-        </div>
-
-        <div className="results-product">
-          <Hits hitComponent={ Hit } />
-          <Pagination />
-        </div>
-      </div>
-    </div>
-
-
-  </InstantSearch>
-}
-
-const MetaInfoInstantSearch = () => {
+const __MetaInfoInstantSearch = () => {
   const {
     indexUiState,
     setIndexUiState,
@@ -215,7 +145,10 @@ const algoliaSearchInit = () => {
 
   [...sp_elems].forEach(el => {
     const root = createRoot(el);
-    root.render(<AlgoliaSearchPage />);
+    root.render(<AlgoliaSearchPage 
+      algoliaConfig={ algolia }
+      searchClient={ searchClient } 
+      indexName={ searchIndex } />);
   })
 }
 

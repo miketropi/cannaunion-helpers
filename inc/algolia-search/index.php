@@ -12,7 +12,16 @@ add_action('init', 'ch_algolia_search_init', 30);
 function ch_post_shared_attributes( array $shared_attributes, WP_Post $post) {
   if(get_post_type($post) == 'product') {
     $p = wc_get_product($post->ID);
+
+    // price html
     $shared_attributes['price_html'] = $p->get_price_html();
+
+    // price int
+    $price_int = $p->get_regular_price();
+    if($p->is_on_sale()) {
+      $price_int = $p->get_sale_price();
+    }
+    $shared_attributes['price_number'] = floatval($price_int);
   }
   return $shared_attributes;
 }

@@ -492,3 +492,220 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   width: calc(100% - 120px);
   padding-left: 20px;
 }
+
+.algolia-search-page-summary {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 860px;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.algolia-search-page-summary .search__header {
+  width: 100%;
+  margin-bottom: 3em;
+}
+.algolia-search-page-summary .search__header .ais-SearchBox .ais-SearchBox-form {
+  display: flex;
+}
+.algolia-search-page-summary .search__header .ais-SearchBox .ais-SearchBox-form button {
+  display: none !important;
+}
+.algolia-search-page-summary .search__header .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-input {
+  border: none;
+  border-bottom: solid 2px black;
+  padding: 10px 0 10px 1.5em;
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 0;
+  background: url(../../images/search-black.svg) no-repeat left center, transparent;
+  background-size: 32px;
+}
+.algolia-search-page-summary .search-sidebar {
+  width: 28%;
+}
+.algolia-search-page-summary .search-sidebar h4 {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget {
+  margin-bottom: 2em;
+  border-bottom: solid 1px #eee;
+  padding-bottom: 2em;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .ais-RefinementList-count {
+  padding: 3px 5px;
+  background: #f5f5f5;
+  color: black;
+  margin-left: 7px;
+  border-radius: 2px;
+  font-size: 11px;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .ais-RefinementList-showMore {
+  color: black;
+  border: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1em;
+  border-radius: 30px;
+  padding: 6px 16px;
+  background: #eee;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .ais-RefinementList-showMore:hover {
+  color: white;
+  background: black;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul {
+  margin: 0;
+  padding: 0;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li {
+  margin: 0;
+  padding: 3px 0;
+  list-style: none;
+  font-size: 14px;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox],
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio] {
+  margin-right: 10px;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li .ais-RefinementList-labelText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 70%;
+  display: inline-block;
+  vertical-align: top;
+}
+.algolia-search-page-summary .search-sidebar__heading {
+  margin-bottom: 2em;
+  border-bottom: solid 1px #eee;
+  padding-bottom: 2em;
+}
+.algolia-search-page-summary .search-sidebar__heading h4 {
+  margin: 0;
+  padding: 0;
+}
+.algolia-search-page-summary .search-content {
+  width: 65%;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list {
+  margin: 0;
+  padding: 0;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li {
+  list-style: none;
+  padding: 1em 0;
+  border-bottom: solid 1px #eee;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail {
+  width: 80px;
+  min-width: 80px;
+  margin-right: 2em;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail img {
+  border: solid 1px #eee;
+  border-radius: 2px;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry {
+  width: calc(100% - 80px - 2em);
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry .__title {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 0.4em;
+  margin-top: 0;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry .__title a {
+  color: black;
+}
+.algolia-search-page-summary .meta-current-seach .meta-info-instant-search {
+  display: flex;
+  margin: 0 0 1em 0;
+  padding: 0;
+  font-size: 13px;
+}
+.algolia-search-page-summary .meta-current-seach .meta-info-instant-search li {
+  list-style: none;
+  margin-right: 1em;
+  border-bottom: solid 1px black;
+}
+.algolia-search-page-summary .ais-Pagination {
+  margin-top: 2em;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  margin-top: 2em;
+  font-weight: bold;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li {
+  list-style: none;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li:not(:last-child) {
+  margin-right: 4px;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li .ais-Pagination-link {
+  padding: 8px;
+  color: #999;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li.ais-Pagination-item--selected .ais-Pagination-link {
+  color: black;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li.ais-Pagination-item--disabled {
+  opacity: 0.6;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li.ais-Pagination-item--firstPage {
+  margin-right: auto;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li.ais-Pagination-item--lastPage {
+  margin-left: auto;
+}
+.algolia-search-page-summary .ais-CurrentRefinements {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: solid 1px #eee;
+}
+.algolia-search-page-summary .ais-CurrentRefinements ul.ais-CurrentRefinements-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.algolia-search-page-summary .ais-CurrentRefinements ul.ais-CurrentRefinements-list li.ais-CurrentRefinements-item {
+  list-style: none;
+  margin-bottom: 5px;
+}
+.algolia-search-page-summary .ais-CurrentRefinements ul.ais-CurrentRefinements-list li.ais-CurrentRefinements-item > span:not(.ais-CurrentRefinements-label) {
+  list-style: none;
+  margin: 0 0 10px 10px;
+  font-size: 13px;
+  background: #eee;
+  padding: 3px 10px;
+  line-height: normal;
+  border-radius: 30px;
+  border: solid 1px #e3e3e3;
+}
+.algolia-search-page-summary .ais-CurrentRefinements ul.ais-CurrentRefinements-list li.ais-CurrentRefinements-item > span:not(.ais-CurrentRefinements-label) .ais-CurrentRefinements-delete {
+  padding: 0;
+  background: none;
+  margin-left: 13px;
+  border: none;
+  color: black;
+  font-size: 13px;
+}
