@@ -460,3 +460,115 @@ body.algolia-search-modal-active {
 
   }
 }
+
+.wp-algolia-search-page-result-view {
+  .ais-serach-app {
+    margin-bottom: 40px;
+  }
+  .ais-serach-results {
+    display: flex;
+    flex-wrap: wrap;
+    .ais-filters-col {
+      width: 30%;
+      padding-right: 60px;
+      .ais-filters-item {
+        &:not(:last-child) {
+          margin-bottom: 40px;
+        }
+        .ais-filter-title {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 1.3;
+          text-transform: uppercase;
+          margin: 0 0 15px;
+        }
+        .ais-RefinementList {
+          &-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+          &-item {
+            &:not(:last-child) {
+              margin-bottom: 12px;
+            }
+          }
+          &-label {
+            cursor: pointer;
+          }
+          &-checkbox {
+            display: inline-block;
+            vertical-align: middle;
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+          }
+          &-labelText {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #212121;
+          }
+          &-count {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1;
+            text-align: center;
+            color: #212121;
+            background: #EEEEEE;
+            min-width: 20px;
+            margin-left: 8px;
+            padding: 4px;
+            border-radius: 100px;
+          }
+          &-showMore {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: #BE9D4F;
+            background: none;
+            margin-top: 15px;
+            padding: 0;
+            border: none;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+    .ais-results-col {
+      width: 70%;
+      .ais-Hits {
+        &-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        &-item {
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+          border-bottom: 1px solid #EEEEEE;
+        }
+        .hit-item {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          &__thumbnail {
+            width: 120px;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          &__entry {
+            width: calc(100% - 120px);
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}

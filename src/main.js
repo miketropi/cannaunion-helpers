@@ -9,6 +9,7 @@ import algoliaSearchInit from "./app/algolia-search";
   const ready = () => {
     algoliaSearchInit();
   }
+ 
   $('.header-icon-tools .search-icon').on("click", function(event) {
     event.preventDefault();
 
