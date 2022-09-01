@@ -6039,12 +6039,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/InstantSearch.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/Configure.js");
-/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/SearchBox.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/InstantSearch.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks/dist/es/components/Configure.js");
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/SearchBox.js");
 /* harmony import */ var _components_SearchSidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/SearchSidebar */ "./src/components/SearchSidebar.js");
 /* harmony import */ var _components_SearchContent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SearchContent */ "./src/components/SearchContent.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _libs_algolia_search_page_routing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../libs/algolia-search-page-routing */ "./src/libs/algolia-search-page-routing.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
@@ -6057,25 +6059,67 @@ var AlgoliaSearchPage = function AlgoliaSearchPage(_ref) {
   var searchClient = _ref.searchClient,
       indexName = _ref.indexName,
       algoliaConfig = _ref.algoliaConfig;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_4__.InstantSearch, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.InstantSearch, {
     searchClient: searchClient,
     indexName: indexName,
     routing: true,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_5__.Configure, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__.Configure, {
       hitsPerPage: 10
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "algolia-search-page-summary",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         className: "search__header",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_6__.SearchBox, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_7__.SearchBox, {
           placeholder: algoliaConfig.searchInputPlaceholder
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_SearchSidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_SearchContent__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_SearchSidebar__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_SearchContent__WEBPACK_IMPORTED_MODULE_2__["default"], {})]
     })]
   });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AlgoliaSearchPage);
+
+/***/ }),
+
+/***/ "./src/components/HierarchicalMenuWidget.js":
+/*!**************************************************!*\
+  !*** ./src/components/HierarchicalMenuWidget.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-instantsearch-hooks-web */ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/HierarchicalMenu.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+var HierarchicalMenuWidget = function HierarchicalMenuWidget(_ref) {
+  var title = _ref.title,
+      attr = _ref.attr,
+      limit = _ref.limit,
+      more = _ref.more,
+      className = _ref.className;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+    className: ['filter-widget', className].join(' '),
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+      className: "filter-widget__inner",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h4", {
+        children: title
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__.HierarchicalMenu, {
+        attributes: attr,
+        limit: limit,
+        showMore: more
+      })]
+    })
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HierarchicalMenuWidget);
 
 /***/ }),
 
@@ -6332,6 +6376,8 @@ var Hit = function Hit(_ref) {
 var SeachContent = function SeachContent() {
   var labelMap = {
     'taxonomies.product_cat': 'Category',
+    'taxonomies_hierarchical.product_cat.lvl0': 'Category',
+    'taxonomies_hierarchical.product_cat.lvl1': 'Category',
     'price_number': 'Price'
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -6373,29 +6419,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _RefinementListWidget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RefinementListWidget */ "./src/components/RefinementListWidget.js");
-/* harmony import */ var _PriceFilter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PriceFilter */ "./src/components/PriceFilter.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _HierarchicalMenuWidget__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HierarchicalMenuWidget */ "./src/components/HierarchicalMenuWidget.js");
+/* harmony import */ var _PriceFilter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PriceFilter */ "./src/components/PriceFilter.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 
 
 var SearchSidebar = function SearchSidebar() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "search-sidebar",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "search-sidebar__inner",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "search-sidebar__heading",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
           children: "Filter"
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_RefinementListWidget__WEBPACK_IMPORTED_MODULE_0__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_HierarchicalMenuWidget__WEBPACK_IMPORTED_MODULE_1__["default"], {
         title: "Category",
-        attr: "taxonomies.product_cat",
-        limit: 10,
-        more: true
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_PriceFilter__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        attr: ['taxonomies_hierarchical.product_cat.lvl0', 'taxonomies_hierarchical.product_cat.lvl1'],
+        limit: 20,
+        more: false
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_PriceFilter__WEBPACK_IMPORTED_MODULE_2__["default"], {
         title: "Price"
       })]
     })
@@ -6403,6 +6451,56 @@ var SearchSidebar = function SearchSidebar() {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchSidebar);
+
+/***/ }),
+
+/***/ "./src/libs/algolia-search-page-routing.js":
+/*!*************************************************!*\
+  !*** ./src/libs/algolia-search-page-routing.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var instantsearch_js_es_lib_routers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! instantsearch.js/es/lib/routers */ "./node_modules/instantsearch.js/es/lib/routers/history.js");
+
+
+
+var getCategorySlug = function getCategorySlug(name) {
+  return name.split(' ').map(encodeURIComponent).join('+');
+};
+
+var getCategoryName = function getCategoryName(slug) {
+  return slug.split('+').map(decodeURIComponent).join(' ');
+};
+
+var routing = {
+  router: (0,instantsearch_js_es_lib_routers__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    windowTitle: function windowTitle(_ref) {
+      var category = _ref.category,
+          query = _ref.query;
+      console.log('router', category, query);
+    },
+    createURL: function createURL(_ref2) {
+      var qsModule = _ref2.qsModule,
+          routeState = _ref2.routeState,
+          location = _ref2.location;
+      console.log('createURL', [qsModule, routeState, location]);
+    },
+    stateMapping: {
+      stateToRoute: function stateToRoute(uiState) {
+        console.log('stateMapping - stateToRoute', uiState);
+      },
+      routeToState: function routeToState(routeState) {
+        console.log('stateMapping - routeToState', routeState);
+      }
+    }
+  })
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routing);
 
 /***/ }),
 
@@ -42938,6 +43036,283 @@ function getValue(refinement) {
 
 /***/ }),
 
+/***/ "./node_modules/instantsearch.js/es/connectors/hierarchical-menu/connectHierarchicalMenu.js":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/instantsearch.js/es/connectors/hierarchical-menu/connectHierarchicalMenu.js ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/documentation.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/noop.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/checkRendering.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/createSendEventForFacet.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/logger.js");
+/* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/isEqual.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+var withUsage = (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_0__.createDocumentationMessageGenerator)({
+  name: 'hierarchical-menu',
+  connector: true
+});
+var DEFAULT_SORT = ['name:asc'];
+
+/**
+ * **HierarchicalMenu** connector provides the logic to build a custom widget
+ * that will give the user the ability to explore facets in a tree-like structure.
+ *
+ * This is commonly used for multi-level categorization of products on e-commerce
+ * websites. From a UX point of view, we suggest not displaying more than two
+ * levels deep.
+ *
+ * @type {Connector}
+ * @param {function(HierarchicalMenuRenderingOptions, boolean)} renderFn Rendering function for the custom **HierarchicalMenu** widget.
+ * @param {function} unmountFn Unmount function called when the widget is disposed.
+ * @return {function(CustomHierarchicalMenuWidgetParams)} Re-usable widget factory for a custom **HierarchicalMenu** widget.
+ */
+var connectHierarchicalMenu = function connectHierarchicalMenu(renderFn) {
+  var unmountFn = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__["default"];
+  (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_2__["default"])(renderFn, withUsage());
+  return function (widgetParams) {
+    var _ref = widgetParams || {},
+        attributes = _ref.attributes,
+        _ref$separator = _ref.separator,
+        separator = _ref$separator === void 0 ? ' > ' : _ref$separator,
+        _ref$rootPath = _ref.rootPath,
+        rootPath = _ref$rootPath === void 0 ? null : _ref$rootPath,
+        _ref$showParentLevel = _ref.showParentLevel,
+        showParentLevel = _ref$showParentLevel === void 0 ? true : _ref$showParentLevel,
+        _ref$limit = _ref.limit,
+        limit = _ref$limit === void 0 ? 10 : _ref$limit,
+        _ref$showMore = _ref.showMore,
+        showMore = _ref$showMore === void 0 ? false : _ref$showMore,
+        _ref$showMoreLimit = _ref.showMoreLimit,
+        showMoreLimit = _ref$showMoreLimit === void 0 ? 20 : _ref$showMoreLimit,
+        _ref$sortBy = _ref.sortBy,
+        sortBy = _ref$sortBy === void 0 ? DEFAULT_SORT : _ref$sortBy,
+        _ref$transformItems = _ref.transformItems,
+        transformItems = _ref$transformItems === void 0 ? function (items) {
+      return items;
+    } : _ref$transformItems;
+
+    if (!attributes || !Array.isArray(attributes) || attributes.length === 0) {
+      throw new Error(withUsage('The `attributes` option expects an array of strings.'));
+    }
+
+    if (showMore === true && showMoreLimit <= limit) {
+      throw new Error(withUsage('The `showMoreLimit` option must be greater than `limit`.'));
+    }
+
+    // we need to provide a hierarchicalFacet name for the search state
+    // so that we can always map $hierarchicalFacetName => real attributes
+    // we use the first attribute name
+    var _attributes = _slicedToArray(attributes, 1),
+        hierarchicalFacetName = _attributes[0];
+
+    var sendEvent; // Provide the same function to the `renderFn` so that way the user
+    // has to only bind it once when `isFirstRendering` for instance
+
+    var toggleShowMore = function toggleShowMore() {};
+
+    function cachedToggleShowMore() {
+      toggleShowMore();
+    }
+
+    var _refine;
+
+    var isShowingMore = false;
+
+    function createToggleShowMore(renderOptions, widget) {
+      return function () {
+        isShowingMore = !isShowingMore;
+        widget.render(renderOptions);
+      };
+    }
+
+    function getLimit() {
+      return isShowingMore ? showMoreLimit : limit;
+    }
+
+    function _prepareFacetValues(facetValues) {
+      return facetValues.slice(0, getLimit()).map(function (_ref2) {
+        var label = _ref2.name,
+            value = _ref2.escapedValue,
+            data = _ref2.data,
+            path = _ref2.path,
+            subValue = _objectWithoutProperties(_ref2, ["name", "escapedValue", "data", "path"]);
+
+        var item = _objectSpread(_objectSpread({}, subValue), {}, {
+          value: value,
+          label: label,
+          data: null
+        });
+
+        if (Array.isArray(data)) {
+          item.data = _prepareFacetValues(data);
+        }
+
+        return item;
+      });
+    }
+
+    return {
+      $$type: 'ais.hierarchicalMenu',
+      init: function init(initOptions) {
+        var instantSearchInstance = initOptions.instantSearchInstance;
+        renderFn(_objectSpread(_objectSpread({}, this.getWidgetRenderState(initOptions)), {}, {
+          instantSearchInstance: instantSearchInstance
+        }), true);
+      },
+      render: function render(renderOptions) {
+        var instantSearchInstance = renderOptions.instantSearchInstance;
+        toggleShowMore = createToggleShowMore(renderOptions, this);
+        renderFn(_objectSpread(_objectSpread({}, this.getWidgetRenderState(renderOptions)), {}, {
+          instantSearchInstance: instantSearchInstance
+        }), false);
+      },
+      dispose: function dispose(_ref3) {
+        var state = _ref3.state;
+        unmountFn();
+        return state.removeHierarchicalFacet(hierarchicalFacetName).setQueryParameter('maxValuesPerFacet', undefined);
+      },
+      getRenderState: function getRenderState(renderState, renderOptions) {
+        return _objectSpread(_objectSpread({}, renderState), {}, {
+          hierarchicalMenu: _objectSpread(_objectSpread({}, renderState.hierarchicalMenu), {}, _defineProperty({}, hierarchicalFacetName, this.getWidgetRenderState(renderOptions)))
+        });
+      },
+      getWidgetRenderState: function getWidgetRenderState(_ref4) {
+        var results = _ref4.results,
+            state = _ref4.state,
+            createURL = _ref4.createURL,
+            instantSearchInstance = _ref4.instantSearchInstance,
+            helper = _ref4.helper;
+        var items = [];
+        var canToggleShowMore = false; // Bind createURL to this specific attribute
+
+        function _createURL(facetValue) {
+          return createURL(state.resetPage().toggleFacetRefinement(hierarchicalFacetName, facetValue));
+        }
+
+        if (!sendEvent) {
+          sendEvent = (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__.createSendEventForFacet)({
+            instantSearchInstance: instantSearchInstance,
+            helper: helper,
+            attribute: hierarchicalFacetName,
+            widgetType: this.$$type
+          });
+        }
+
+        if (!_refine) {
+          _refine = function _refine(facetValue) {
+            sendEvent('click', facetValue);
+            helper.toggleFacetRefinement(hierarchicalFacetName, facetValue).search();
+          };
+        }
+
+        if (results) {
+          var facetValues = results.getFacetValues(hierarchicalFacetName, {
+            sortBy: sortBy,
+            facetOrdering: sortBy === DEFAULT_SORT
+          });
+          var facetItems = facetValues && !Array.isArray(facetValues) && facetValues.data ? facetValues.data : []; // If the limit is the max number of facet retrieved it is impossible to know
+          // if the facets are exhaustive. The only moment we are sure it is exhaustive
+          // is when it is strictly under the number requested unless we know that another
+          // widget has requested more values (maxValuesPerFacet > getLimit()).
+          // Because this is used for making the search of facets unable or not, it is important
+          // to be conservative here.
+
+          var hasExhaustiveItems = (state.maxValuesPerFacet || 0) > getLimit() ? facetItems.length <= getLimit() : facetItems.length < getLimit();
+          canToggleShowMore = showMore && (isShowingMore || !hasExhaustiveItems);
+          items = transformItems(_prepareFacetValues(facetItems), {
+            results: results
+          });
+        }
+
+        return {
+          items: items,
+          refine: _refine,
+          canRefine: items.length > 0,
+          createURL: _createURL,
+          sendEvent: sendEvent,
+          widgetParams: widgetParams,
+          isShowingMore: isShowingMore,
+          toggleShowMore: cachedToggleShowMore,
+          canToggleShowMore: canToggleShowMore
+        };
+      },
+      getWidgetUiState: function getWidgetUiState(uiState, _ref5) {
+        var searchParameters = _ref5.searchParameters;
+        var path = searchParameters.getHierarchicalFacetBreadcrumb(hierarchicalFacetName);
+
+        if (!path.length) {
+          return uiState;
+        }
+
+        return _objectSpread(_objectSpread({}, uiState), {}, {
+          hierarchicalMenu: _objectSpread(_objectSpread({}, uiState.hierarchicalMenu), {}, _defineProperty({}, hierarchicalFacetName, path))
+        });
+      },
+      getWidgetSearchParameters: function getWidgetSearchParameters(searchParameters, _ref6) {
+        var uiState = _ref6.uiState;
+        var values = uiState.hierarchicalMenu && uiState.hierarchicalMenu[hierarchicalFacetName];
+
+        if (searchParameters.isHierarchicalFacet(hierarchicalFacetName)) {
+          var facet = searchParameters.getHierarchicalFacetByName(hierarchicalFacetName);
+           true ? (0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_4__.warning)((0,_lib_utils_index_js__WEBPACK_IMPORTED_MODULE_5__["default"])(facet.attributes, attributes) && facet.separator === separator && facet.rootPath === rootPath, 'Using Breadcrumb and HierarchicalMenu on the same facet with different options overrides the configuration of the HierarchicalMenu.') : 0;
+        }
+
+        var withFacetConfiguration = searchParameters.removeHierarchicalFacet(hierarchicalFacetName).addHierarchicalFacet({
+          name: hierarchicalFacetName,
+          attributes: attributes,
+          separator: separator,
+          rootPath: rootPath,
+          showParentLevel: showParentLevel
+        });
+        var currentMaxValuesPerFacet = withFacetConfiguration.maxValuesPerFacet || 0;
+        var nextMaxValuesPerFacet = Math.max(currentMaxValuesPerFacet, showMore ? showMoreLimit : limit);
+        var withMaxValuesPerFacet = withFacetConfiguration.setQueryParameter('maxValuesPerFacet', nextMaxValuesPerFacet);
+
+        if (!values) {
+          return withMaxValuesPerFacet.setQueryParameters({
+            hierarchicalFacetsRefinements: _objectSpread(_objectSpread({}, withMaxValuesPerFacet.hierarchicalFacetsRefinements), {}, _defineProperty({}, hierarchicalFacetName, []))
+          });
+        }
+
+        return withMaxValuesPerFacet.addHierarchicalFacetRefinement(hierarchicalFacetName, values.join(separator));
+      }
+    };
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (connectHierarchicalMenu);
+
+/***/ }),
+
 /***/ "./node_modules/instantsearch.js/es/connectors/hits/connectHits.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/instantsearch.js/es/connectors/hits/connectHits.js ***!
@@ -43090,6 +43465,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/noop.js");
 /* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/checkRendering.js");
 /* harmony import */ var _lib_utils_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../lib/utils/index.js */ "./node_modules/instantsearch.js/es/lib/utils/isFiniteNumber.js");
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -43269,12 +43646,35 @@ var connectNumericMenu = function connectNumericMenu(renderFn) {
           });
         }
 
+        var hasNoResults = results ? results.nbHits === 0 : true;
+        var preparedItems = prepareItems(state);
+        var allIsSelected = true;
+
+        var _iterator = _createForOfIteratorHelper(preparedItems),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var item = _step.value;
+
+            if (item.isRefined && decodeURI(item.value) !== '{}') {
+              allIsSelected = false;
+              break;
+            }
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+
         return {
           createURL: connectorState.createURL(state),
-          items: transformItems(prepareItems(state), {
+          items: transformItems(preparedItems, {
             results: results
           }),
-          hasNoResults: results ? results.nbHits === 0 : true,
+          hasNoResults: hasNoResults,
+          canRefine: !(hasNoResults && allIsSelected),
           refine: connectorState.refine,
           sendEvent: connectorState.sendEvent,
           widgetParams: widgetParams
@@ -47166,7 +47566,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('4.44.1');
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ('4.45.0');
 
 /***/ }),
 
@@ -48011,6 +48411,99 @@ function CurrentRefinements(_ref) {
 
 /***/ }),
 
+/***/ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/HierarchicalMenu.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/react-instantsearch-hooks-web/dist/es/ui/HierarchicalMenu.js ***!
+  \***********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HierarchicalMenu": () => (/* binding */ HierarchicalMenu)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _lib_cx_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/cx.js */ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/lib/cx.js");
+/* harmony import */ var _lib_isModifierClick_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/isModifierClick.js */ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/lib/isModifierClick.js");
+/* harmony import */ var _ShowMoreButton_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ShowMoreButton.js */ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/ShowMoreButton.js");
+
+
+var _excluded = ["classNames", "items", "hasItems", "onNavigate", "createURL", "showMore", "canToggleShowMore", "onToggleShowMore", "isShowingMore"];
+
+
+
+
+
+function HierarchicalList(_ref) {
+  var className = _ref.className,
+      _ref$classNames = _ref.classNames,
+      classNames = _ref$classNames === void 0 ? {} : _ref$classNames,
+      items = _ref.items,
+      createURL = _ref.createURL,
+      onNavigate = _ref.onNavigate;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("ul", {
+    className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-list', classNames.list, className)
+  }, items.map(function (item) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("li", {
+      key: item.value,
+      className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-item', classNames.item, item.data && (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-item--parent', classNames.parentItem), item.isRefined && (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-item--selected', classNames.selectedItem))
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("a", {
+      className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-link', classNames.link),
+      href: createURL(item.value),
+      onClick: function onClick(event) {
+        if ((0,_lib_isModifierClick_js__WEBPACK_IMPORTED_MODULE_4__.isModifierClick)(event)) {
+          return;
+        }
+
+        event.preventDefault();
+        onNavigate(item.value);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("span", {
+      className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-label', classNames.label)
+    }, item.label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("span", {
+      className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-count', classNames.count)
+    }, item.count)), item.data && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(HierarchicalList, {
+      className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-list--child', classNames.childList),
+      classNames: classNames,
+      items: item.data,
+      onNavigate: onNavigate,
+      createURL: createURL
+    }));
+  }));
+}
+
+function HierarchicalMenu(_ref2) {
+  var _ref2$classNames = _ref2.classNames,
+      classNames = _ref2$classNames === void 0 ? {} : _ref2$classNames,
+      items = _ref2.items,
+      hasItems = _ref2.hasItems,
+      onNavigate = _ref2.onNavigate,
+      createURL = _ref2.createURL,
+      showMore = _ref2.showMore,
+      canToggleShowMore = _ref2.canToggleShowMore,
+      onToggleShowMore = _ref2.onToggleShowMore,
+      isShowingMore = _ref2.isShowingMore,
+      props = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, _excluded);
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement("div", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu', classNames.root, !hasItems && (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu--noRefinement', classNames.noRefinementRoot), props.className)
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(HierarchicalList, {
+    classNames: classNames,
+    items: items,
+    onNavigate: onNavigate,
+    createURL: createURL
+  }), showMore && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_ShowMoreButton_js__WEBPACK_IMPORTED_MODULE_5__.ShowMoreButton, {
+    className: (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-showMore', classNames.showMore, !canToggleShowMore && (0,_lib_cx_js__WEBPACK_IMPORTED_MODULE_3__.cx)('ais-HierarchicalMenu-showMore--disabled', classNames.disabledShowMore)),
+    disabled: !canToggleShowMore,
+    onClick: onToggleShowMore,
+    isShowingMore: isShowingMore
+  }));
+}
+
+/***/ }),
+
 /***/ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/Highlight.js":
 /*!****************************************************************************!*\
   !*** ./node_modules/react-instantsearch-hooks-web/dist/es/ui/Highlight.js ***!
@@ -48669,6 +49162,77 @@ function CurrentRefinements(_ref) {
 
 /***/ }),
 
+/***/ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/HierarchicalMenu.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/react-instantsearch-hooks-web/dist/es/widgets/HierarchicalMenu.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "HierarchicalMenu": () => (/* binding */ HierarchicalMenu)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_instantsearch_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-instantsearch-hooks */ "./node_modules/react-instantsearch-hooks/dist/es/connectors/useHierarchicalMenu.js");
+/* harmony import */ var _ui_HierarchicalMenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ui/HierarchicalMenu.js */ "./node_modules/react-instantsearch-hooks-web/dist/es/ui/HierarchicalMenu.js");
+
+
+var _excluded = ["attributes", "limit", "rootPath", "separator", "showMore", "showMoreLimit", "showParentLevel", "sortBy", "transformItems"];
+
+
+
+function HierarchicalMenu(_ref) {
+  var attributes = _ref.attributes,
+      limit = _ref.limit,
+      rootPath = _ref.rootPath,
+      separator = _ref.separator,
+      showMore = _ref.showMore,
+      showMoreLimit = _ref.showMoreLimit,
+      showParentLevel = _ref.showParentLevel,
+      sortBy = _ref.sortBy,
+      transformItems = _ref.transformItems,
+      props = (0,_babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, _excluded);
+
+  var _useHierarchicalMenu = (0,react_instantsearch_hooks__WEBPACK_IMPORTED_MODULE_3__.useHierarchicalMenu)({
+    attributes: attributes,
+    limit: limit,
+    rootPath: rootPath,
+    separator: separator,
+    showMore: showMore,
+    showMoreLimit: showMoreLimit,
+    showParentLevel: showParentLevel,
+    sortBy: sortBy,
+    transformItems: transformItems
+  }, {
+    $$widgetType: 'ais.hierarchicalMenu'
+  }),
+      items = _useHierarchicalMenu.items,
+      canRefine = _useHierarchicalMenu.canRefine,
+      canToggleShowMore = _useHierarchicalMenu.canToggleShowMore,
+      createURL = _useHierarchicalMenu.createURL,
+      isShowingMore = _useHierarchicalMenu.isShowingMore,
+      refine = _useHierarchicalMenu.refine,
+      toggleShowMore = _useHierarchicalMenu.toggleShowMore;
+
+  var uiProps = {
+    items: items,
+    hasItems: canRefine,
+    createURL: createURL,
+    onNavigate: refine,
+    canToggleShowMore: canToggleShowMore,
+    onToggleShowMore: toggleShowMore,
+    isShowingMore: isShowingMore
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_ui_HierarchicalMenu_js__WEBPACK_IMPORTED_MODULE_4__.HierarchicalMenu, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, uiProps, {
+    showMore: showMore
+  }));
+}
+
+/***/ }),
+
 /***/ "./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Highlight.js":
 /*!*********************************************************************************!*\
   !*** ./node_modules/react-instantsearch-hooks-web/dist/es/widgets/Highlight.js ***!
@@ -49184,6 +49748,27 @@ __webpack_require__.r(__webpack_exports__);
 
 function useCurrentRefinements(props, additionalWidgetProperties) {
   return (0,_hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__.useConnector)(instantsearch_js_es_connectors_current_refinements_connectCurrentRefinements_js__WEBPACK_IMPORTED_MODULE_1__["default"], props, additionalWidgetProperties);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-instantsearch-hooks/dist/es/connectors/useHierarchicalMenu.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/react-instantsearch-hooks/dist/es/connectors/useHierarchicalMenu.js ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useHierarchicalMenu": () => (/* binding */ useHierarchicalMenu)
+/* harmony export */ });
+/* harmony import */ var instantsearch_js_es_connectors_hierarchical_menu_connectHierarchicalMenu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! instantsearch.js/es/connectors/hierarchical-menu/connectHierarchicalMenu.js */ "./node_modules/instantsearch.js/es/connectors/hierarchical-menu/connectHierarchicalMenu.js");
+/* harmony import */ var _hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../hooks/useConnector.js */ "./node_modules/react-instantsearch-hooks/dist/es/hooks/useConnector.js");
+
+
+function useHierarchicalMenu(props, additionalWidgetProperties) {
+  return (0,_hooks_useConnector_js__WEBPACK_IMPORTED_MODULE_0__.useConnector)(instantsearch_js_es_connectors_hierarchical_menu_connectHierarchicalMenu_js__WEBPACK_IMPORTED_MODULE_1__["default"], props, additionalWidgetProperties);
 }
 
 /***/ }),

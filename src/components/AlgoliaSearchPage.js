@@ -5,6 +5,7 @@ import {
   Configure } from 'react-instantsearch-hooks-web';
 import SearchSidebar from '../components/SearchSidebar';
 import SeachContent from '../components/SearchContent';
+import routing from '../libs/algolia-search-page-routing';
 
 const DEBOUNCE_TIME = 400;
 
@@ -12,7 +13,7 @@ const AlgoliaSearchPage = ({ searchClient, indexName, algoliaConfig }) => {
   return <InstantSearch 
     searchClient={ searchClient } 
     indexName={ indexName } 
-    routing={ true } >
+    routing={ true } > 
     <Configure hitsPerPage={ 10 } />
     <div className="algolia-search-page-summary">
       <div className="search__header">

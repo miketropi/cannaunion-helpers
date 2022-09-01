@@ -31,6 +31,8 @@ const Hit = ({ hit }) => {
 const SeachContent = () => {
   const labelMap = {
     'taxonomies.product_cat': 'Category',
+    'taxonomies_hierarchical.product_cat.lvl0': 'Category',
+    'taxonomies_hierarchical.product_cat.lvl1': 'Category',
     'price_number': 'Price',
   }
 

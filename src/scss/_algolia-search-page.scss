@@ -49,16 +49,19 @@
 
       }
 
-      .ais-RefinementList-count {
+      .ais-RefinementList-count,
+      .ais-HierarchicalMenu-count {
         padding: 3px 5px;
         background: #f5f5f5;
         color: black;
         margin-left: 7px;
         border-radius: 2px;
         font-size: 11px;
+        line-height: normal;
       }
 
-      .ais-RefinementList-showMore {
+      .ais-RefinementList-showMore,
+      .ais-HierarchicalMenu-showMore {
         color: black;
         border: none;
         font-size: 11px;
@@ -90,13 +93,19 @@
             margin-right: 10px;
           } 
 
-          .ais-RefinementList-labelText {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 70%;
-            display: inline-block;
+          .ais-RefinementList-labelText,
+          .ais-HierarchicalMenu-link {
+            display: flex;
+            align-items: center;
             vertical-align: top;
+            color: black;
+
+            .ais-HierarchicalMenu-label {
+              white-space: nowrap;
+              overflow: hidden;
+              max-width: 60%;
+              text-overflow: ellipsis;
+            }
           }
         }
       }
@@ -264,6 +273,56 @@
             font-size: 13px;
           }
         }
+      }
+    }
+  }
+
+  .ais-HierarchicalMenu-list {
+
+    &--child {
+      padding-left: 1em !important;
+    }
+  }
+
+  .ais-HierarchicalMenu-item {
+
+    .ais-HierarchicalMenu-link {
+      
+      &:before {
+        content: "";
+        width: 16px;
+        height: 16px; 
+        margin-right: 0.6em;
+        background: url(../../images/arrow-up-black.svg) left center no-repeat;
+        background-size: 100%;
+      }
+    }
+
+    > a {
+      opacity: .6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .ais-HierarchicalMenu-label {
+
+    }
+
+    &--selected {
+
+      .ais-HierarchicalMenu-link {
+        
+        &:before {
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+        }
+      }
+      
+      > a { 
+        font-weight: bold;
+        opacity: 1;
       }
     }
   }
