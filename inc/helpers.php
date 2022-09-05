@@ -30,6 +30,51 @@ function ch_fix_products_cat($catID, $products = []) {
   }, $products);
 }
 
+function ch_get_all_products_no_subscription() {
+  $args = [ 
+    'numberposts' => -1,
+    'post_type' => 'product',
+    'post_status' => 'any',
+    'meta_query' => [
+      'relation' => 'OR', //default AND
+      [
+        'key' => '_wcsatt_schemes',
+        'compare' => 'NOT EXISTS'
+      ]
+    ]
+  ];
+
+  $result = get_posts($args);
+
+  return array_map(function($p) {
+    return  $p->ID;
+  }, $result);
+}
+
+function ch_add_products_no_subscription($p_ids = []) {
+  foreach($p_ids as $_index => $id) {
+    update_post_meta((int) $id, '_wcsatt_schemes', [
+      [
+        'subscription_period_interval' => 1,
+        'subscription_period' => 'month',
+        'subscription_length' => 1,
+        'subscription_pricing_method' => 'inherit',
+        'subscription_regular_price' => null,
+        'subscription_sale_price' => null, 
+        'subscription_discount' => 20,
+        'position' => 0,
+        'subscription_price' => null, 
+        'subscription_payment_sync_date' => 0,
+      ],
+    ]);
+  }
+}
+
 add_action('init', function() {
+  // if(isset($_GET['run_add_p_subscription'])) {
+  //   $pids = ch_get_all_products_no_subscription();
+  //   ch_add_products_no_subscription($pids);
+  // }
+  
   // echo '<pre>'; var_dump(ch_query_all_product_cats_fix()); echo '</pre>';
 });
