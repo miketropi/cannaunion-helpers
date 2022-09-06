@@ -71,10 +71,11 @@ function ch_add_products_no_subscription($p_ids = []) {
 }
 
 add_action('init', function() {
-  // if(isset($_GET['run_add_p_subscription'])) {
-  //   $pids = ch_get_all_products_no_subscription();
-  //   ch_add_products_no_subscription($pids);
-  // }
+  if(isset($_GET['run_add_p_subscription'])) {
+    $pids = ch_get_all_products_no_subscription();
+    ch_add_products_no_subscription($pids);
+    echo '---Done---';
+  }
   
   // echo '<pre>'; var_dump(ch_query_all_product_cats_fix()); echo '</pre>';
 });

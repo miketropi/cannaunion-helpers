@@ -505,6 +505,24 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .algolia-search-page-summary .search__header {
   width: 100%;
   margin-bottom: 3em;
+  display: flex;
+}
+.algolia-search-page-summary .search__header .button-mobile-filter-toggle {
+  margin-right: 1em;
+  border: none;
+  border-radius: 1px;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.algolia-search-page-summary .search__header .button-mobile-filter-toggle svg {
+  fill: white;
+  width: 22px;
+}
+.algolia-search-page-summary .search__header .ais-SearchBox {
+  width: 100%;
 }
 .algolia-search-page-summary .search__header .ais-SearchBox .ais-SearchBox-form {
   display: flex;
@@ -522,8 +540,33 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   background: url(../../images/search-black.svg) no-repeat left center, transparent;
   background-size: 32px;
 }
+@media (max-width: 730px) {
+  .algolia-search-page-summary .search__header .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-input {
+    font-size: 1em;
+    background-size: 24px;
+    padding-left: 2em;
+  }
+}
 .algolia-search-page-summary .search-sidebar {
   width: 28%;
+}
+.algolia-search-page-summary .search-sidebar__mobi-close {
+  display: block;
+  width: 100%;
+  background: black;
+  color: white;
+  border-radius: 1px;
+  border: none;
+  margin-bottom: 1.5em;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.algolia-search-page-summary .search-sidebar__mobi-close:active, .algolia-search-page-summary .search-sidebar__mobi-close:hover {
+  background: black;
+  color: white;
+  opacity: 0.8;
 }
 .algolia-search-page-summary .search-sidebar h4 {
   font-size: 1.3em;
@@ -601,6 +644,12 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 }
 .algolia-search-page-summary .search-content {
   width: 65%;
+}
+@media (max-width: 730px) {
+  .algolia-search-page-summary .search-sidebar,
+.algolia-search-page-summary .search-content {
+    width: 100%;
+  }
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list {
   margin: 0;
@@ -743,4 +792,33 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .algolia-search-page-summary .ais-HierarchicalMenu-item--selected > a {
   font-weight: bold;
   opacity: 1;
+}
+
+@media (max-width: 730px) {
+  .algolia-search-page-summary .search-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    padding: 10px;
+    height: 100vh;
+    overflow: auto;
+    width: 300px;
+    max-width: calc(100% - 50px);
+    z-index: 99999;
+    border-right: 1px solid #eee;
+    box-shadow: 0 0 11px 0 rgba(1, 1, 1, 0.15);
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+  }
+  body.search-sidebar-filter-active .algolia-search-page-summary .search-sidebar {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
 }

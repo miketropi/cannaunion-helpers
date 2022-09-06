@@ -31,6 +31,8 @@
   require(CH_DIR . '/inc/acf-options.php');
   require(CH_DIR . '/inc/shortcodes.php');
 
+  require(CH_DIR . '/inc/elem-widgets.php');
+
   /**
    * Algolia serach
    */

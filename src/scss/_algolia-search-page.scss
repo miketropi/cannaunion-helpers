@@ -10,6 +10,27 @@
   .search__header {
     width: 100%;
     margin-bottom: 3em; 
+    display: flex;
+
+    .button-mobile-filter-toggle {
+      margin-right: 1em;
+      border: none;
+      border-radius: 1px;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        fill: white;
+        width: 22px;
+      }
+    }
+
+    .ais-SearchBox {
+      width: 100%;
+    }
     
     .ais-SearchBox .ais-SearchBox-form { 
       display: flex;
@@ -27,12 +48,39 @@
         border-radius: 0;
         background: url(../../images/search-black.svg) no-repeat left center, transparent;
         background-size: 32px;
+
+        @media(max-width: 730px) {
+          font-size: 1em;
+          background-size: 24px;
+          padding-left: 2em;
+        }
       }
     }
   }
 
   .search-sidebar {
     width: 28%;
+
+    &__mobi-close {
+      display: block;
+      width: 100%;
+      background: black;
+      color: white;
+      border-radius: 1px;
+      border: none;
+      margin-bottom: 1.5em;
+      font-weight: bold;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      &:active,
+      &:hover {
+        background: black;
+        color: white;
+        opacity: .8;
+      }
+    }
 
     h4 {
       font-size: 1.3em;
@@ -125,6 +173,14 @@
 
   .search-content {
     width: 65%;
+  }
+
+  @media(max-width: 730px) {
+    
+    .search-sidebar,
+    .search-content {
+      width: 100%;
+    }
   }
 
   .ais-Hits {
@@ -323,6 +379,46 @@
       > a { 
         font-weight: bold;
         opacity: 1;
+      }
+    }
+  }
+}
+
+@media(max-width: 730px) {
+
+  .algolia-search-page-summary {
+
+    .search-sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: white;
+      padding: 10px;
+      height: 100vh;
+      overflow: auto;
+      width: 300px;
+      max-width: calc(100% - 50px);
+      z-index: 99999;
+      border-right: 1px solid #eee;
+      box-shadow: 0 0 11px 0 rgb(1 1 1 / 15%);
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s ease;
+      -webkit-transition: .3s ease;
+    }
+  } 
+  
+  body.search-sidebar-filter-active {
+
+    .algolia-search-page-summary {
+
+      .search-sidebar {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
