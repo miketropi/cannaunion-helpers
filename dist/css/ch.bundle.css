@@ -493,6 +493,43 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   padding-left: 20px;
 }
 
+.products.elementor-grid li.product .onsale {
+  display: block;
+  font-family: Arial;
+  font-size: 11px !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.products.elementor-grid li.product .woocommerce-loop-product__title {
+  font-family: Arial !important;
+  color: black !important;
+  line-height: normal !important;
+  margin: 0 0 0.3em !important;
+  font-size: 1.3em !important;
+}
+.products.elementor-grid li.product .price {
+  display: flex !important;
+  flex-wrap: wrap;
+  line-height: 1.2em;
+  align-items: center;
+}
+.products.elementor-grid li.product .price * {
+  font-size: 14px !important;
+  margin-right: 2px;
+  line-height: normal;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.products.elementor-grid li.product .add_to_cart_button {
+  font-family: Arial;
+  font-size: 14px !important;
+  padding: 10px 20px;
+  font-weight: bold !important;
+  margin: 1em 0 0 0;
+  cursor: pointer;
+  text-transform: capitalize !important;
+}
+
 .algolia-search-page-summary {
   display: flex;
   flex-wrap: wrap;
