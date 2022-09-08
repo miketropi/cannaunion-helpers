@@ -35,13 +35,13 @@ function ch_get_all_products_no_subscription() {
     'numberposts' => -1,
     'post_type' => 'product',
     'post_status' => 'any',
-    // 'meta_query' => [
-    //   'relation' => 'OR', //default AND
-    //   [
-    //     'key' => '_wcsatt_schemes',
-    //     'compare' => 'NOT EXISTS'
-    //   ]
-    // ]
+    'meta_query' => [
+      'relation' => 'OR', //default AND
+      [
+        'key' => '_wcsatt_schemes',
+        'compare' => 'NOT EXISTS'
+      ]
+    ]
   ];
 
   $result = get_posts($args);
