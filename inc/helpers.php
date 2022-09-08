@@ -35,13 +35,13 @@ function ch_get_all_products_no_subscription() {
     'numberposts' => -1,
     'post_type' => 'product',
     'post_status' => 'any',
-    'meta_query' => [
-      'relation' => 'OR', //default AND
-      [
-        'key' => '_wcsatt_schemes',
-        'compare' => 'NOT EXISTS'
-      ]
-    ]
+    // 'meta_query' => [
+    //   'relation' => 'OR', //default AND
+    //   [
+    //     'key' => '_wcsatt_schemes',
+    //     'compare' => 'NOT EXISTS'
+    //   ]
+    // ]
   ];
 
   $result = get_posts($args);
@@ -57,7 +57,7 @@ function ch_add_products_no_subscription($p_ids = []) {
       [
         'subscription_period_interval' => 1,
         'subscription_period' => 'month',
-        'subscription_length' => 1,
+        'subscription_length' => 0,
         'subscription_pricing_method' => 'inherit',
         'subscription_regular_price' => null,
         'subscription_sale_price' => null, 
