@@ -36,3 +36,34 @@ function ch_shortcode_algolia_search_result_func($atts) {
 }
 
 add_shortcode('algolia_search_result', 'ch_shortcode_algolia_search_result_func');
+
+function ch_shortcode_archive_title_func($atts) {
+  global $wp_query;
+
+  $a = shortcode_atts([
+    'tag' => 'h1',
+    'only_text' => false,
+    'classes' => '',
+  ], $atts);
+
+  $cat_obj = $wp_query->get_queried_object();
+  $cat_id = $cat_obj->term_id;
+  $cat_name = $cat_obj->name;
+  $cat_subname = get_field('sub_heading_text', 'product_cat_' . $cat_id);
+
+  if(!empty($cat_subname)) {
+    $cat_name = $cat_subname;
+  }
+
+  $with_tag = "<{$a['tag']}>%CAT_NAME%</{$a['tag']}>";
+
+  ob_start();
+  if($a['only_text'] == true) {
+    echo $cat_name;
+  } else {
+    echo str_replace(['%CAT_NAME%'], [$cat_name], $with_tag);
+  }
+  return ob_get_clean(); 
+}
+
+add_shortcode('archive_custom_title', 'ch_shortcode_archive_title_func');
