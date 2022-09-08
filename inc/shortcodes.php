@@ -55,7 +55,7 @@ function ch_shortcode_archive_title_func($atts) {
     $cat_name = $cat_subname;
   }
 
-  $with_tag = "<{$a['tag']}>%CAT_NAME%</{$a['tag']}>";
+  $with_tag = "<{$a['tag']} class='". $a['classes'] ."'>%CAT_NAME%</{$a['tag']}>";
 
   ob_start();
   if($a['only_text'] == true) {
