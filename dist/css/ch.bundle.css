@@ -530,6 +530,97 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   text-transform: capitalize !important;
 }
 
+.toc-nav-handle {
+  margin-bottom: 100px;
+}
+.toc-nav-handle ul.table-of-contents-list {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item {
+  list-style: none;
+  margin-right: 0.5em;
+  padding-right: 0.5em;
+  margin-bottom: 6px;
+}
+@media (max-width: 500px) {
+  .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: solid 1px #eee;
+    width: 100%;
+  }
+}
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item:not(:last-child) {
+  border-right: 2px solid #b3b3b3;
+}
+@media (max-width: 500px) {
+  .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item:not(:last-child) {
+    border-right: none;
+  }
+}
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #368455;
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  border-bottom: solid 1px transparent;
+}
+@media (max-width: 500px) {
+  .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a {
+    font-size: 13px;
+    line-height: 1.3em;
+  }
+}
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:hover {
+  color: #474747;
+  border-bottom: solid 1px transparent;
+}
+
+.toc-select-mobi-view {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 99999;
+  padding: 4px;
+  border-top: solid 1px #eee;
+  visibility: hidden;
+  opacity: 0;
+}
+@media (max-width: 500px) {
+  .toc-select-mobi-view {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.toc-select-mobi-view select {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 8px 16px;
+  background-color: white;
+}
+
+.ch-toc-container p {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .algolia-search-page-summary {
   display: flex;
   flex-wrap: wrap;
