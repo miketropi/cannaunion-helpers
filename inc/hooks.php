@@ -21,3 +21,18 @@ function ch_toc_product_archive_page($content){
 }
 
 add_filter('the_content','ch_toc_product_archive_page', 30);
+
+add_filter('ch/phpdata_script', function($phpdata = []) {
+
+  if( is_product_category() ) {
+    $cate = get_queried_object();
+    $enable = get_field('table_of_content_enable', 'product_cat_' . $cate->term_id);
+    $position = get_field('table_of_content_position', 'product_cat_' . $cate->term_id);
+    $phpdata['toc'] = [
+      'enable' => $enable,
+      'position' => $position,
+    ];
+  }
+
+  return $phpdata;
+}, 30);

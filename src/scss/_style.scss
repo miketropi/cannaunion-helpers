@@ -627,6 +627,10 @@ body.algolia-search-modal-active {
 .toc-nav-handle {
   margin-bottom: 100px;
 
+  &.__pos_2 {
+    margin-bottom: 30px;
+  }
+
   ul.table-of-contents-list {
     margin: 0;
     padding: 0;
@@ -634,6 +638,11 @@ body.algolia-search-modal-active {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+
+    @media(max-width: 500px) {
+      border-left: 3px solid #368455;
+      padding-left: 10px;
+    }
 
     li.table-of-contents-item {
       list-style: none;
@@ -643,8 +652,8 @@ body.algolia-search-modal-active {
 
       @media(max-width: 500px) {
         margin: 0;
-        padding: 10px 0;
-        border-bottom: solid 1px #eee;
+        padding: 4px 0 6px;
+        line-height: 16px;
         width: 100%;
       }
 
@@ -658,7 +667,7 @@ body.algolia-search-modal-active {
 
       a {
         font-family: Arial, Helvetica, sans-serif;
-        color: #368455;
+        color: #555;
         font-size: 15px;
         font-weight: 700;
         transition: .3s ease;
@@ -668,12 +677,20 @@ body.algolia-search-modal-active {
         @media(max-width: 500px) {
           font-size: 13px;
           line-height: 1.3em;
+          font-weight: normal;
+
+          &:hover,
+          &:active {
+            font-weight: bold;
+            color: #222 !important;
+          }
         }
 
         &:hover {
-          color: #474747;
+          color: #555;
           border-bottom: solid 1px transparent;
         }
+        
       }
     }
   }

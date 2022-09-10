@@ -12,13 +12,26 @@ const TOC = require('generate-table-of-contents');
   }
 
   const tocHandle = () => {
-    const handle = document.querySelector('.toc-nav-handle');
+    
     const target = document.querySelector('.toc-target .ch-toc-container');
-    if(!target || !handle) return;
+    if(!target) return;
+
+    const { toc } = CH_PHP_DATA;
+    if(!toc) return;
+
+    const { enable, position } = {
+      enable: "0",
+      position: "pos_1",
+      ...toc
+    }
+
+    const handle = document.querySelector(`.toc-nav-handle.__${ position }`);
+
+    if(enable != "1") return;
 
     const mobiView = (tocHtml) => {
       const _select = $('<select>', {
-        name: '__toc',
+        name: '__toc', 
         class: 'toc-select',
       });
 
@@ -62,7 +75,7 @@ const TOC = require('generate-table-of-contents');
       scrollToElem(ID);
     })
 
-    $('body').append($(`<div>`, { class: 'toc-select-mobi-view' }).append($select));
+    // $('body').append($(`<div>`, { class: 'toc-select-mobi-view' }).append($select));
     handle.append(_html);
   }
 
