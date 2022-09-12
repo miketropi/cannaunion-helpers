@@ -3,7 +3,7 @@
  * Plugin Name: Cannaunion Helpers
  * Plugin URI: #
  * Description: Helper function for Cannaunion
- * Version: 1.0.0
+ * Version: 1.0.6
  * Author: Mike
  * Author URI: #
  * License: GNU GENERAL PUBLIC LICENSE
@@ -13,7 +13,7 @@
   /**
    * Define
    */
-  define('CH_VER', '1.0.5');
+  define('CH_VER', '1.0.6');
   define('CH_DIR', plugin_dir_path(__FILE__));
   define('CH_URI', plugin_dir_url(__FILE__));
 }
