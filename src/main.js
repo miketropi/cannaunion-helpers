@@ -62,6 +62,23 @@ const TOC = require('generate-table-of-contents');
       $('html, body').stop().animate({scrollTop: top - spaceTop}, 500, 'swing');
     }
 
+    // Override opt 
+    [..._html.querySelectorAll('a')].forEach(el => {
+      const ID = el.getAttribute('href');
+      const $source = $(ID);
+      const tocTitle = $source.data('toc-title');
+      const tocEnable = $source.data('toc-enable');
+
+      if(tocTitle) {
+        $(_html).find(`a[href="${ ID }"]`).html(tocTitle);
+      }
+
+      if(tocEnable === 'off') {
+        $(_html).find(`a[href="${ ID }"]`).parent().remove();
+      }
+    });
+
+    // Add event click
     [..._html.querySelectorAll('a')].forEach(el => el.addEventListener('click', e => {
       e.preventDefault();
       const ID = e.target.getAttribute('href');

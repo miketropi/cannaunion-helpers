@@ -639,56 +639,41 @@ body.algolia-search-modal-active {
     display: flex;
     flex-wrap: wrap;
 
-    @media(max-width: 500px) {
-      border-left: 3px solid #368455;
-      padding-left: 10px;
-    }
+    border-left: 3px solid #368455;
+    padding-left: 10px;
 
     li.table-of-contents-item {
-      list-style: none;
-      margin-right: .5em;
-      padding-right: .5em;
+      margin: 0;
+      padding: 4px 0 6px;
+      line-height: 16px;
+      width: 100%;
       margin-bottom: 6px;
-
-      @media(max-width: 500px) {
-        margin: 0;
-        padding: 4px 0 6px;
-        line-height: 16px;
-        width: 100%;
-      }
+      list-style: none;
 
       &:not(:last-child) {
-        border-right: 2px solid #b3b3b3;
-
-        @media(max-width: 500px) {
-          border-right: none;
-        }
+        border-right: none;
       }
 
       a {
         font-family: Arial, Helvetica, sans-serif;
         color: #555;
         font-size: 15px;
-        font-weight: 700;
         transition: .3s ease;
         -webkit-transition: .3s ease;
-        border-bottom: solid 1px transparent;
+        
+        line-height: 1.3em;
+        font-weight: normal;
 
         @media(max-width: 500px) {
           font-size: 13px;
-          line-height: 1.3em;
-          font-weight: normal;
-
-          &:hover,
-          &:active {
-            font-weight: bold;
-            color: #222 !important;
-          }
         }
 
-        &:hover {
-          color: #555;
-          border-bottom: solid 1px transparent;
+        &:hover,
+        &:active,
+        &:focus,
+        &:target {
+          font-weight: bold;
+          color: #222 !important;
         }
         
       }

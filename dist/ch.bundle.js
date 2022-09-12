@@ -53067,7 +53067,24 @@ var TOC = __webpack_require__(/*! generate-table-of-contents */ "./node_modules/
       $('html, body').stop().animate({
         scrollTop: top - spaceTop
       }, 500, 'swing');
-    };
+    }; // Override opt 
+
+
+    _toConsumableArray(_html.querySelectorAll('a')).forEach(function (el) {
+      var ID = el.getAttribute('href');
+      var $source = $(ID);
+      var tocTitle = $source.data('toc-title');
+      var tocEnable = $source.data('toc-enable');
+
+      if (tocTitle) {
+        $(_html).find("a[href=\"".concat(ID, "\"]")).html(tocTitle);
+      }
+
+      if (tocEnable === 'off') {
+        $(_html).find("a[href=\"".concat(ID, "\"]")).parent().remove();
+      }
+    }); // Add event click
+
 
     _toConsumableArray(_html.querySelectorAll('a')).forEach(function (el) {
       return el.addEventListener('click', function (e) {
