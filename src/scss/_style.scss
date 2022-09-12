@@ -624,8 +624,13 @@ body.algolia-search-modal-active {
 
 }
 
-.toc-nav-handle {
+.toc-nav-handle,
+.__toc-nav-handle-shortcode {
   margin-bottom: 100px;
+
+  &.__toc-nav-handle-shortcode {
+    margin-bottom: 30px;
+  }
 
   &.__pos_2 {
     margin-bottom: 30px;

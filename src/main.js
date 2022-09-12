@@ -2,6 +2,7 @@
  * Main js
  */
 import algoliaSearchInit from "./app/algolia-search";
+import ToCShortcode from "./libs/toc-shortcode";
 const TOC = require('generate-table-of-contents');
 
 ((w, $) => {
@@ -96,9 +97,20 @@ const TOC = require('generate-table-of-contents');
     handle.append(_html);
   }
 
+  const ToCShortcode_Func = () => {
+    // ToCShortcode
+    const elems = document.querySelectorAll('.__toc-nav-container');
+    if(!elems) return;
+    
+    [...elems].forEach(el => {
+      ToCShortcode(el)
+    })
+  }
+
   const ready = () => {
     algoliaSearchInit();
     tocHandle();
+    ToCShortcode_Func();
   }
  
   $('.header-icon-tools .search-icon').on("click", function(event) {

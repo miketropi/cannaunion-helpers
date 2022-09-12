@@ -67,3 +67,26 @@ function ch_shortcode_archive_title_func($atts) {
 }
 
 add_shortcode('archive_custom_title', 'ch_shortcode_archive_title_func');
+
+function ch_shortcode_toc_func($atts = []) {
+  $a = shortcode_atts([
+    'target' => '.elementor-widget-theme-post-content',
+    'start_level' => 2, 
+    'end_level' => 2, 
+    'class' => '',
+  ], $atts);
+
+  ob_start();
+  ?>
+  <div 
+    class="__toc-nav-container __toc-nav-handle-shortcode <?php echo $a['class'] ?>" 
+    data-start-level="<?php echo $a['start_level'] ?>"
+    data-end-level="<?php echo $a['end_level'] ?>"
+    data-content-target="<?php echo $a['target'] ?>">
+    <!-- JS Render -->
+  </div> <!-- .toc-nav-container -->
+  <?php 
+  return ob_get_clean();
+}
+
+add_shortcode('ch_toc', 'ch_shortcode_toc_func');

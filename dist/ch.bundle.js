@@ -6546,6 +6546,89 @@ var routing = {
 
 /***/ }),
 
+/***/ "./src/libs/toc-shortcode.js":
+/*!***********************************!*\
+  !*** ./src/libs/toc-shortcode.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var _TOC = __webpack_require__(/*! generate-table-of-contents */ "./node_modules/generate-table-of-contents/index.js");
+
+function _randstr(prefix) {
+  return Math.random().toString(36).replace('0.', prefix || '');
+}
+
+var ToCShortcode = function ToCShortcode(elem) {
+  var _elem$dataset = elem.dataset,
+      startLevel = _elem$dataset.startLevel,
+      endLevel = _elem$dataset.endLevel,
+      contentTarget = _elem$dataset.contentTarget;
+  var headings = document.querySelector(contentTarget).querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+  _toConsumableArray(headings).forEach(function (el) {
+    el.setAttribute('id', _randstr('toc__'));
+  });
+
+  var _html = _TOC(document.querySelector(contentTarget), {
+    startLevel: startLevel,
+    endLevel: endLevel
+  }); // Override opt 
+
+
+  _toConsumableArray(_html.querySelectorAll('a')).forEach(function (el) {
+    var ID = el.getAttribute('href');
+    var $source = jQuery(ID);
+    var tocTitle = $source.data('toc-title');
+    var tocEnable = $source.data('toc-enable');
+
+    if (tocTitle) {
+      jQuery(_html).find("a[href=\"".concat(ID, "\"]")).html(tocTitle);
+    }
+
+    if (tocEnable === 'off') {
+      jQuery(_html).find("a[href=\"".concat(ID, "\"]")).parent().remove();
+    }
+  });
+
+  var _scrollToElem = function _scrollToElem(ID) {
+    var top = jQuery("".concat(ID)).offset().top;
+    var spaceTop = window.innerWidth > 550 ? 160 : 65;
+    jQuery('html, body').stop().animate({
+      scrollTop: top - spaceTop
+    }, 500, 'swing');
+  };
+
+  jQuery(_html).on('click', 'a', function (e) {
+    e.preventDefault();
+    var ID = e.target.getAttribute('href');
+
+    _scrollToElem(ID);
+  }); // console.log(_html);
+
+  jQuery(elem).append(_html);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ToCShortcode);
+
+/***/ }),
+
 /***/ "./node_modules/generate-table-of-contents/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/generate-table-of-contents/index.js ***!
@@ -52983,6 +53066,7 @@ var __webpack_exports__ = {};
   \*********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_algolia_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/algolia-search */ "./src/app/algolia-search.js");
+/* harmony import */ var _libs_toc_shortcode__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./libs/toc-shortcode */ "./src/libs/toc-shortcode.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -53004,6 +53088,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /**
  * Main js
  */
+
 
 
 var TOC = __webpack_require__(/*! generate-table-of-contents */ "./node_modules/generate-table-of-contents/index.js");
@@ -53103,9 +53188,20 @@ var TOC = __webpack_require__(/*! generate-table-of-contents */ "./node_modules/
     handle.append(_html);
   };
 
+  var ToCShortcode_Func = function ToCShortcode_Func() {
+    // ToCShortcode
+    var elems = document.querySelectorAll('.__toc-nav-container');
+    if (!elems) return;
+
+    _toConsumableArray(elems).forEach(function (el) {
+      (0,_libs_toc_shortcode__WEBPACK_IMPORTED_MODULE_1__["default"])(el);
+    });
+  };
+
   var ready = function ready() {
     (0,_app_algolia_search__WEBPACK_IMPORTED_MODULE_0__["default"])();
     tocHandle();
+    ToCShortcode_Func();
   };
 
   $('.header-icon-tools .search-icon').on("click", function (event) {

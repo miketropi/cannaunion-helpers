@@ -530,13 +530,20 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   text-transform: capitalize !important;
 }
 
-.toc-nav-handle {
+.toc-nav-handle,
+.__toc-nav-handle-shortcode {
   margin-bottom: 100px;
 }
-.toc-nav-handle.__pos_2 {
+.toc-nav-handle.__toc-nav-handle-shortcode,
+.__toc-nav-handle-shortcode.__toc-nav-handle-shortcode {
   margin-bottom: 30px;
 }
-.toc-nav-handle ul.table-of-contents-list {
+.toc-nav-handle.__pos_2,
+.__toc-nav-handle-shortcode.__pos_2 {
+  margin-bottom: 30px;
+}
+.toc-nav-handle ul.table-of-contents-list,
+.__toc-nav-handle-shortcode ul.table-of-contents-list {
   margin: 0;
   padding: 0;
   margin: 0;
@@ -546,7 +553,8 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   border-left: 3px solid #368455;
   padding-left: 10px;
 }
-.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item {
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item,
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item {
   margin: 0;
   padding: 4px 0 6px;
   line-height: 16px;
@@ -554,10 +562,12 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   margin-bottom: 6px;
   list-style: none;
 }
-.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item:not(:last-child) {
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item:not(:last-child),
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item:not(:last-child) {
   border-right: none;
 }
-.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a {
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a,
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item a {
   font-family: Arial, Helvetica, sans-serif;
   color: #555;
   font-size: 15px;
@@ -567,11 +577,16 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   font-weight: normal;
 }
 @media (max-width: 500px) {
-  .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a {
+  .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a,
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item a {
     font-size: 13px;
   }
 }
-.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:hover, .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:active, .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:focus, .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:target {
+.toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:hover, .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:active, .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:focus, .toc-nav-handle ul.table-of-contents-list li.table-of-contents-item a:target,
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item a:hover,
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item a:active,
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item a:focus,
+.__toc-nav-handle-shortcode ul.table-of-contents-list li.table-of-contents-item a:target {
   font-weight: bold;
   color: #222 !important;
 }
