@@ -717,8 +717,8 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .algolia-search-page-summary .search-sidebar .filter-widget .ais-RefinementList-count,
 .algolia-search-page-summary .search-sidebar .filter-widget .ais-HierarchicalMenu-count {
   padding: 3px 5px;
-  background: #f5f5f5;
-  color: black;
+  background: #BE9D4F;
+  color: #FFFFFF;
   margin-left: 7px;
   border-radius: 2px;
   font-size: 11px;
@@ -751,9 +751,48 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   list-style: none;
   font-size: 14px;
 }
+.algolia-search-page-summary .search-sidebar .filter-widget ul li label {
+  cursor: pointer;
+}
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox],
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio] {
   margin-right: 10px;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio] {
+  position: relative;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio]::before {
+  display: none;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #BE9D4F;
+  border: 1px solid #BE9D4F;
+  border-radius: 2px;
+  z-index: 2;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio]::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #BE9D4F;
+  border-radius: 2px;
+  z-index: 1;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio]:checked::before {
+  display: block;
 }
 .algolia-search-page-summary .search-sidebar .filter-widget ul li .ais-RefinementList-labelText,
 .algolia-search-page-summary .search-sidebar .filter-widget ul li .ais-HierarchicalMenu-link {
@@ -779,7 +818,7 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   padding: 0;
 }
 .algolia-search-page-summary .search-content {
-  width: 65%;
+  width: 67%;
 }
 @media (max-width: 730px) {
   .algolia-search-page-summary .search-sidebar,
@@ -803,14 +842,18 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail {
   width: 80px;
   min-width: 80px;
-  margin-right: 2em;
+  margin-right: 1.6em;
+  overflow: hidden;
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail img {
   border: solid 1px #eee;
   border-radius: 2px;
 }
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail:hover img {
+  opacity: 0.6;
+}
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry {
-  width: calc(100% - 80px - 2em);
+  width: calc(100% - 80px - 1.6em);
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry .__title {
   font-size: 1.1em;
@@ -822,9 +865,18 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry .__title a {
   color: black;
 }
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry .__title a svg {
+  margin-bottom: -5px;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry .__title a:hover {
+  color: #BE9D4F;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__entry .__title a:hover path {
+  fill: #BE9D4F;
+}
 .algolia-search-page-summary .meta-current-seach .meta-info-instant-search {
   display: flex;
-  margin: 0 0 1em 0;
+  margin: 0;
   padding: 0;
   font-size: 13px;
 }
@@ -833,10 +885,18 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   margin-right: 1em;
   border-bottom: solid 1px black;
 }
+.algolia-search-page-summary .meta-current-seach .meta-info-instant-search li mark {
+  background-color: #BE9D4F;
+  color: #FFFFFF;
+  padding: 3px 4px;
+  border-radius: 2px;
+}
 .algolia-search-page-summary .ais-Pagination {
   margin-top: 2em;
 }
 .algolia-search-page-summary .ais-Pagination .ais-Pagination-list {
+  width: calc(100% + 4px);
+  margin: 0 -2px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -850,13 +910,22 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 }
 .algolia-search-page-summary .ais-Pagination .ais-Pagination-list li {
   list-style: none;
-}
-.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li:not(:last-child) {
-  margin-right: 4px;
+  margin: 2px;
 }
 .algolia-search-page-summary .ais-Pagination .ais-Pagination-list li .ais-Pagination-link {
-  padding: 8px;
-  color: #999;
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #BE9D4F;
+  padding: 4px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+.algolia-search-page-summary .ais-Pagination .ais-Pagination-list li .ais-Pagination-link:hover {
+  color: #000000;
 }
 .algolia-search-page-summary .ais-Pagination .ais-Pagination-list li.ais-Pagination-item--selected .ais-Pagination-link {
   color: black;
@@ -885,23 +954,25 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .algolia-search-page-summary .ais-CurrentRefinements ul.ais-CurrentRefinements-list li.ais-CurrentRefinements-item {
   list-style: none;
   margin-bottom: 5px;
+  font-size: 14px;
 }
 .algolia-search-page-summary .ais-CurrentRefinements ul.ais-CurrentRefinements-list li.ais-CurrentRefinements-item > span:not(.ais-CurrentRefinements-label) {
   list-style: none;
   margin: 0 0 10px 10px;
   font-size: 13px;
-  background: #eee;
+  background: #BE9D4F;
+  color: #FFFFFF;
   padding: 3px 10px;
   line-height: normal;
   border-radius: 30px;
-  border: solid 1px #e3e3e3;
+  border: solid 1px #BE9D4F;
 }
 .algolia-search-page-summary .ais-CurrentRefinements ul.ais-CurrentRefinements-list li.ais-CurrentRefinements-item > span:not(.ais-CurrentRefinements-label) .ais-CurrentRefinements-delete {
   padding: 0;
   background: none;
   margin-left: 13px;
   border: none;
-  color: black;
+  color: #FFFFFF;
   font-size: 13px;
 }
 .algolia-search-page-summary .ais-HierarchicalMenu-list--child {
@@ -914,6 +985,7 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   margin-right: 0.6em;
   background: url(../../images/arrow-up-black.svg) left center no-repeat;
   background-size: 100%;
+  background-color: #eee;
 }
 .algolia-search-page-summary .ais-HierarchicalMenu-item > a {
   opacity: 0.6;
