@@ -59,7 +59,7 @@
   }
 
   .search-sidebar {
-    width: 28%;
+    width: 30%;
 
     &__mobi-close {
       display: block;
@@ -127,13 +127,15 @@
         padding: 0;
 
         li {
-          margin: 0;
-          padding: 3px 0;
           list-style: none;
-          font-size: 14px;
+          font-size: 16px;
 
           label{
             cursor: pointer;
+            padding: 8px 10px;
+            box-shadow: 0px 1px 8px rgb(0 0 0 / 10%);
+            margin-top: 12px;
+            border-radius: 5px;
           }
           input[type=checkbox], 
           input[type=radio] {
@@ -240,12 +242,12 @@
           &__thumbnail {
             width: 80px;
             min-width: 80px;
-            margin-right: 1.6em;
-            overflow: hidden;
+            margin-right: 1.5em;
 
             img {
               border: solid 1px #eee;
               border-radius: 2px;
+              box-shadow: 0px 1px 5px rgb(0 0 0 / 10%);
             }
 
             &:hover{
@@ -256,10 +258,10 @@
           }
 
           &__entry {
-            width: calc(100% - 80px - 1.6em);
+            width: calc(100% - 80px - 1.5em);
 
             .__title {
-              font-size: 1.125em;
+              font-size: 1em;
               font-weight: bold;
               line-height: 1.1;
               margin-bottom: 0.4em;
@@ -409,23 +411,41 @@
 
   .ais-HierarchicalMenu-list {
 
-    &--child {
-      padding-left: 1em !important;
-    }
   }
 
   .ais-HierarchicalMenu-item {
+    padding: 8px 10px;
+    box-shadow: 0px 1px 8px rgb(0 0 0 / 10%);
+    margin-top: 12px;
+    border-radius: 5px;
 
     .ais-HierarchicalMenu-link {
-      
+      position: relative;
+
       &:before {
         content: "";
-        width: 16px;
-        height: 16px; 
-        margin-right: 0.6em;
-        background: url(../../images/arrow-up-black.svg) left center no-repeat;
-        background-size: 100%;
-        background-color: #eee;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 1px; 
+        // background: url(../../images/arrow-up-black.svg) left center no-repeat;
+        // background-size: 100%;
+        background-color: #000000;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 15px; 
+        // background: url(../../images/arrow-up-black.svg) left center no-repeat;
+        // background-size: 100%;
+        background-color: #000000;
+        transition: 0.2s;
       }
     }
 
@@ -442,15 +462,39 @@
     }
 
     &--selected {
-
-      .ais-HierarchicalMenu-link {
+      // &.ais-HierarchicalMenu-item--parent{
+      //   .ais-HierarchicalMenu-link {
+      //     &::after {
+      //       transform: translateY(-50%) rotate(-90deg);
+      //       transition: 0.2s;
+      //     }
+      //   }
+      // }
+      .ais-HierarchicalMenu-list--child{
         
-        &:before {
-          transform: rotate(180deg);
-          -webkit-transform: rotate(180deg);
+        .ais-HierarchicalMenu-link{
+          font-size: 14px;
+          &::after {
+            transform: translateY(-50%) rotate(0);
+          }
+        }
+        .ais-HierarchicalMenu-item--selected{
+          .ais-HierarchicalMenu-link {
+            &::after {
+              transform: translateY(-50%) rotate(-90deg);
+              transition: 0.2s;
+            }
+          }
         }
       }
-      
+
+      .ais-HierarchicalMenu-link {
+        &::after {
+          transform: translateY(-50%) rotate(-90deg);
+          transition: 0.2s;
+        }
+      }
+   
       > a { 
         font-weight: bold;
         opacity: 1;
