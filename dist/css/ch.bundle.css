@@ -754,7 +754,7 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   padding: 8px 10px;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
   margin-top: 12px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox],
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio] {
@@ -830,12 +830,22 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list {
   margin: 0;
-  padding: 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li {
   list-style: none;
-  padding: 1em 0;
+  margin-top: 1em;
+  padding: 0 0 1em;
   border-bottom: solid 1px #eee;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li:first-child {
+  margin-top: 0;
+}
+.algolia-search-page-summary .ais-Hits .ais-Hits-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item {
   display: flex;
@@ -844,12 +854,15 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail {
   width: 80px;
   min-width: 80px;
+  height: 80px;
   margin-right: 1.5em;
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail img {
   border: solid 1px #eee;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .algolia-search-page-summary .ais-Hits .ais-Hits-list li .hit-item__thumbnail:hover img {
   opacity: 0.6;
@@ -984,7 +997,7 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   padding: 8px 10px;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
   margin-top: 12px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .algolia-search-page-summary .ais-HierarchicalMenu-item .ais-HierarchicalMenu-link {
   position: relative;

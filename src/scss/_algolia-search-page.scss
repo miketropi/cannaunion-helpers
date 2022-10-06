@@ -135,7 +135,7 @@
             padding: 8px 10px;
             box-shadow: 0px 1px 8px rgb(0 0 0 / 10%);
             margin-top: 12px;
-            border-radius: 5px;
+            border-radius: 4px;
           }
           input[type=checkbox], 
           input[type=radio] {
@@ -228,13 +228,23 @@
 
     .ais-Hits-list {
       margin: 0;
-      padding: 0;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 0px 1px 5px rgb(0 0 0 / 10%);
 
       li {
         list-style: none;
-        padding: 1em 0;
+        margin-top: 1em;
+        padding: 0 0 1em;
         border-bottom: solid 1px #eee;
 
+        &:first-child{
+          margin-top: 0;
+        }
+        &:last-child{
+          border-bottom: none;
+          padding-bottom: 0;
+        }
         .hit-item {
           display: flex;
           flex-wrap: wrap;
@@ -242,12 +252,14 @@
           &__thumbnail {
             width: 80px;
             min-width: 80px;
+            height: 80px;
             margin-right: 1.5em;
 
             img {
               border: solid 1px #eee;
-              border-radius: 2px;
+              border-radius: 4px;
               box-shadow: 0px 1px 5px rgb(0 0 0 / 10%);
+              object-fit: cover;
             }
 
             &:hover{
@@ -417,7 +429,7 @@
     padding: 8px 10px;
     box-shadow: 0px 1px 8px rgb(0 0 0 / 10%);
     margin-top: 12px;
-    border-radius: 5px;
+    border-radius: 4px;
 
     .ais-HierarchicalMenu-link {
       position: relative;
