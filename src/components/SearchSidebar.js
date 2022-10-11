@@ -4,6 +4,12 @@ import PriceFilter from './PriceFilter';
 import MediaQuery from 'react-responsive';
 
 const SearchSidebar = ({ toggleSidebarMobiFunc }) => {
+  function toggleRefinement(e){
+    e.preventDefault();
+    e.target.classList.toggle('active');
+    e.target.nextSibling.classList.toggle('show');
+  }
+
   return <div className="search-sidebar">
     <div className="search-sidebar__inner">
       <MediaQuery maxWidth={ 730 }>
@@ -17,15 +23,22 @@ const SearchSidebar = ({ toggleSidebarMobiFunc }) => {
       <div className="search-sidebar__heading">
         <h4>Filter</h4>
       </div>
-      <HierarchicalMenuWidget 
-        title="Category" 
-        attr={ [
-          'taxonomies_hierarchical.product_cat.lvl0', 
-          'taxonomies_hierarchical.product_cat.lvl1'
-        ] } 
-        limit={ 20 } more={ false } />
 
-      <PriceFilter title="Price" />
+      <RefinementListWidget 
+        title="Category"
+        attr='taxonomies.product_cat'
+        limit={ 1000 }
+        more={ false }
+        sortBy={['count:desc']}
+        className=""
+        toggleRefinement={toggleRefinement}
+      />
+
+      <PriceFilter 
+        title="Price" 
+        className=""
+        toggleRefinement={toggleRefinement}
+      />
     </div>
   </div>
 }

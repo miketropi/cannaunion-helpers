@@ -13,7 +13,7 @@
   /**
    * Define
    */
-  define('CH_VER', '1.0.6');
+  define('CH_VER', '1.0.8');
   define('CH_DIR', plugin_dir_path(__FILE__));
   define('CH_URI', plugin_dir_url(__FILE__));
 }

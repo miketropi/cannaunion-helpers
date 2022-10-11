@@ -6224,7 +6224,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var PriceFilter = function PriceFilter(_ref) {
   var title = _ref.title,
-      className = _ref.className;
+      className = _ref.className,
+      toggleRefinement = _ref.toggleRefinement;
 
   var _useNumericMenu = (0,react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__.useNumericMenu)({
     attribute: 'price_number',
@@ -6255,27 +6256,35 @@ var PriceFilter = function PriceFilter(_ref) {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
       className: "filter-widget__inner",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h4", {
+        className: "filter-name active",
+        onClick: toggleRefinement,
         children: title
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ul", {
-        className: "ais-NumericMenu-list",
-        children: items.map(function (item) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", {
-            className: ['ais-NumericMenu-item', item.isRefined && 'ais-NumericMenu-item--selected'].join(' '),
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
-              className: "ais-NumericMenu-label",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
-                className: "ais-NumericMenu-radio",
-                type: "radio",
-                checked: item.isRefined,
-                onChange: function onChange() {
-                  return refine(item.value);
-                }
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
-                className: "ais-NumericMenu-labelText",
-                children: item.label
-              })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "filter-content show",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+          className: "ais-RefinementList",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ul", {
+            className: "ais-NumericMenu-list",
+            children: items.map(function (item) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("li", {
+                className: ['ais-NumericMenu-item', item.isRefined && 'ais-NumericMenu-item--selected'].join(' '),
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("label", {
+                  className: "ais-NumericMenu-label",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", {
+                    className: "ais-NumericMenu-radio",
+                    type: "radio",
+                    checked: item.isRefined,
+                    onChange: function onChange() {
+                      return refine(item.value);
+                    }
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("span", {
+                    className: "ais-NumericMenu-labelText",
+                    children: item.label
+                  })]
+                })
+              }, item.value);
             })
-          }, item.value);
+          })
         })
       })]
     })
@@ -6308,17 +6317,25 @@ var RefinementListWidget = function RefinementListWidget(_ref) {
       attr = _ref.attr,
       limit = _ref.limit,
       more = _ref.more,
-      className = _ref.className;
+      sortBy = _ref.sortBy,
+      className = _ref.className,
+      toggleRefinement = _ref.toggleRefinement;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
     className: ['filter-widget', className].join(' '),
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
       className: "filter-widget__inner",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h4", {
+        className: "filter-name active",
+        onClick: toggleRefinement,
         children: title
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__.RefinementList, {
-        attribute: attr,
-        limit: limit,
-        showMore: more
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", {
+        className: "filter-content show",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_instantsearch_hooks_web__WEBPACK_IMPORTED_MODULE_1__.RefinementList, {
+          attribute: attr,
+          limit: limit,
+          showMore: more,
+          sortBy: sortBy
+        })
       })]
     })
   });
@@ -6461,6 +6478,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchSidebar = function SearchSidebar(_ref) {
   var toggleSidebarMobiFunc = _ref.toggleSidebarMobiFunc;
+
+  function toggleRefinement(e) {
+    e.preventDefault();
+    e.target.classList.toggle('active');
+    e.target.nextSibling.classList.toggle('show');
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     className: "search-sidebar",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
@@ -6480,13 +6504,18 @@ var SearchSidebar = function SearchSidebar(_ref) {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h4", {
           children: "Filter"
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_HierarchicalMenuWidget__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_RefinementListWidget__WEBPACK_IMPORTED_MODULE_0__["default"], {
         title: "Category",
-        attr: ['taxonomies_hierarchical.product_cat.lvl0', 'taxonomies_hierarchical.product_cat.lvl1'],
-        limit: 20,
-        more: false
+        attr: "taxonomies.product_cat",
+        limit: 1000,
+        more: false,
+        sortBy: ['count:desc'],
+        className: "",
+        toggleRefinement: toggleRefinement
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_PriceFilter__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        title: "Price"
+        title: "Price",
+        className: "",
+        toggleRefinement: toggleRefinement
       })]
     })
   });

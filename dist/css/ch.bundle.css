@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .ch-table tr:nth-child(even) th, .ch-table tr:nth-child(even) td {
   background: #eee;
 }
@@ -633,8 +634,8 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   display: flex;
   flex-wrap: wrap;
   font-family: Arial, Helvetica, sans-serif;
-  width: 860px;
-  max-width: 100%;
+  max-width: 1170px;
+  width: 100%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -704,15 +705,88 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   color: white;
   opacity: 0.8;
 }
-.algolia-search-page-summary .search-sidebar h4 {
-  font-size: 1.25em;
-  font-weight: bold;
+.algolia-search-page-summary .search-sidebar .filter-widget {
   margin-bottom: 1em;
 }
-.algolia-search-page-summary .search-sidebar .filter-widget {
-  margin-bottom: 2em;
-  border-bottom: solid 1px #eee;
-  padding-bottom: 2em;
+.algolia-search-page-summary .search-sidebar .filter-widget .filter-widget__inner {
+  padding: 0 10px;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget h4 {
+  position: relative;
+  padding: 10px 0;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  cursor: pointer;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget h4::before {
+  content: "";
+  width: 15px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  transition: 0.2s;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget h4::after {
+  content: "";
+  width: 15px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) rotate(90deg);
+  transition: 0.2s;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget h4.active::after {
+  transform: translateY(-50%) rotate(0);
+  transition: 0.2s;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .filter-content {
+  max-height: 0;
+  overflow: auto;
+  width: 100%;
+  border-top: 2px solid #e1dcdc;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .filter-content.show {
+  padding-top: 25px;
+  max-height: 250px;
+  opacity: 1;
+  visibility: visible;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .filter-content::-webkit-scrollbar {
+  width: 3px;
+  background-color: #fff;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .filter-content::-webkit-scrollbar {
+  height: 10px;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .filter-content::-webkit-scrollbar-thumb {
+  background-color: #504848;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .ais-RefinementList .ais-RefinementList-label {
+  display: flex;
+  font-size: 13px;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget .ais-RefinementList .ais-RefinementList-label .ais-RefinementList-count {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .algolia-search-page-summary .search-sidebar .filter-widget .ais-RefinementList-count,
 .algolia-search-page-summary .search-sidebar .filter-widget .ais-HierarchicalMenu-count {
@@ -751,35 +825,81 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
 }
 .algolia-search-page-summary .search-sidebar .filter-widget ul li label {
   cursor: pointer;
-  padding: 8px 10px;
-  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 12px;
-  border-radius: 4px;
+  margin-bottom: 15px;
 }
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox],
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio] {
   margin-right: 10px;
 }
-.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio] {
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox] {
   position: relative;
-  top: 2px;
+  top: 0;
   width: 15px;
   height: 15px;
   border-radius: 2px;
   cursor: pointer;
 }
-.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio]::before {
-  display: none;
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox]::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "✓";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  color: #FFFFFF;
+  background-color: #BE9D4F;
+  border: 1px solid #BE9D4F;
+  border-radius: 2px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox]::after {
   content: "";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #BE9D4F;
+  border-radius: 2px;
+  z-index: 1;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=checkbox]:checked::before {
+  opacity: 1;
+  visibility: visible;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio] {
+  position: relative;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio]::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "✓";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  color: #FFFFFF;
   background-color: #BE9D4F;
   border: 1px solid #BE9D4F;
   border-radius: 2px;
   z-index: 2;
+  opacity: 0;
+  visibility: hidden;
 }
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio]::after {
   content: "";
@@ -794,7 +914,8 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
   z-index: 1;
 }
 .algolia-search-page-summary .search-sidebar .filter-widget ul li input[type=radio]:checked::before {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .algolia-search-page-summary .search-sidebar .filter-widget ul li .ais-RefinementList-labelText,
 .algolia-search-page-summary .search-sidebar .filter-widget ul li .ais-HierarchicalMenu-link {
