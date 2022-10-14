@@ -1098,7 +1098,7 @@ body.algolia-search-modal-active .wp-algolia-search-modal__content {
     height: 27px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 395px) {
   .algolia-search-page-summary .ais-Pagination .ais-Pagination-list li.ais-Pagination-item--firstPage, .algolia-search-page-summary .ais-Pagination .ais-Pagination-list li.ais-Pagination-item--previousPage {
     width: 48%;
     margin-bottom: 5px;
